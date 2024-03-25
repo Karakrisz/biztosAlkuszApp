@@ -7,16 +7,22 @@
                 <div class="contact-form">
                     <form @submit.prevent="sendEmail">
                         <div class="form-group">
-                            <label for="name">Név</label>
-                            <input type="text" id="name" v-model="form.name" required>
+                            <input placeholder="Vezetéknév *" type="text" id="firstname" v-model="form.firstname"
+                                required>
                         </div>
                         <div class="form-group">
-                            <label for="email">Email Cím</label>
-                            <input type="email" id="email" v-model="form.email" required>
+                            <input placeholder="Keresztnév *" type="text" id="lastname" v-model="form.lastname"
+                                required>
                         </div>
                         <div class="form-group">
-                            <label for="message">Üzenet</label>
-                            <textarea id="message" v-model="form.message" required></textarea>
+                            <input placeholder="E-mail cím *" type="email" id="email" v-model="form.email" required>
+                        </div>
+                        <div class="form-group">
+                            <input placeholder="Telefonszám" type="text" id="phonenumber" v-model="form.phonenumber" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea placeholder="Milyen segítségre volna szüksége?" id="message"
+                                v-model="form.message" required></textarea>
                         </div>
                         <button type="submit">Küldés</button>
                     </form>
@@ -48,8 +54,10 @@ export default {
         return {
             footerLinks: Footerlinks,
             form: {
-                name: '',
+                firstname: '',
+                lastname: '',
                 email: '',
+                phonenumber: '',
                 message: ''
             }
         };
