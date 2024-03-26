@@ -6,25 +6,35 @@
                 <h5 class="text-transform-uppercase text-center">VEGYÜK FEL A KAPCSOLATOT!</h5>
                 <div class="contact-form">
                     <form @submit.prevent="sendEmail">
-                        <div class="form-group">
-                            <input placeholder="Vezetéknév *" type="text" id="firstname" v-model="form.firstname"
-                                required>
+                        <div class="contact-form__grid-box grid-2">
+                            <div class="form-group">
+                                <input class="form-group__input" placeholder="Vezetéknév *" type="text" id="firstname"
+                                    v-model="form.firstname" required>
+                            </div>
+                            <div class="form-group">
+                                <input class="form-group__input" placeholder="Keresztnév *" type="text" id="lastname"
+                                    v-model="form.lastname" required>
+                            </div>
+                        </div>
+                        <div class="contact-form__grid-box grid-2">
+                            <div class="form-group">
+                                <input class="form-group__input" placeholder="E-mail cím *" type="email" id="email"
+                                    v-model="form.email" required>
+                            </div>
+                            <div class="form-group">
+                                <input class="form-group__input" placeholder="Telefonszám" type="text" id="phonenumber"
+                                    v-model="form.phonenumber" required>
+                            </div>
                         </div>
                         <div class="form-group">
-                            <input placeholder="Keresztnév *" type="text" id="lastname" v-model="form.lastname"
-                                required>
+                            <textarea class="form-group__textarea" placeholder="Milyen segítségre volna szüksége?"
+                                id="message" v-model="form.message" required></textarea>
                         </div>
-                        <div class="form-group">
-                            <input placeholder="E-mail cím *" type="email" id="email" v-model="form.email" required>
+                        <div class="contact-form__btn-box t-end">
+                            <button class="page-btn text-color-w" type="submit">Küldés
+                                <img class="page-btn__img position-relative" src="/img/btn-arrow.svg"
+                                    alt="Biztos Alkuszom"></button>
                         </div>
-                        <div class="form-group">
-                            <input placeholder="Telefonszám" type="text" id="phonenumber" v-model="form.phonenumber" required>
-                        </div>
-                        <div class="form-group">
-                            <textarea placeholder="Milyen segítségre volna szüksége?" id="message"
-                                v-model="form.message" required></textarea>
-                        </div>
-                        <button type="submit">Küldés</button>
                     </form>
                 </div>
             </div>

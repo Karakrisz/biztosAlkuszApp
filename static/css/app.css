@@ -3,6 +3,12 @@
 body {
     max-width: 2570px;
     margin: auto;
+}
+
+body,
+input,
+textarea,
+button {
     font-family: "Montserrat", sans-serif;
 }
 
@@ -63,17 +69,22 @@ ul {
     display: flex;
 }
 
+.grid-2,
 .grid-3,
 .grid-7 {
     display: grid;
 }
 
-.grid-7 {
-    grid-template-columns: repeat(7, 1fr);
+.grid-2 {
+    grid-template-columns: repeat(2, 1fr);
 }
 
 .grid-3 {
     grid-template-columns: repeat(3, 1fr);
+}
+
+.grid-7 {
+    grid-template-columns: repeat(7, 1fr);
 }
 
 .float-right {
@@ -176,7 +187,8 @@ ul {
 .page__header,
 .services-content,
 .page-link,
-.footer-content__link-box {
+.footer-content__link-box,
+.page-btn {
     background: #001647;
 }
 
@@ -186,13 +198,15 @@ ul {
     font-weight: 700;
 }
 
-.page-link {
+.page-link,
+.page-btn {
     padding: 0.5em 1.5em;
 }
 
 .menu__item,
 .page-link,
-.footer-link {
+.footer-link,
+.page-btn {
     font-weight: 600;
 }
 
@@ -203,13 +217,20 @@ ul {
 
 .slider-content__img,
 .service-bottom__img,
-.blog-box__img {
+.blog-box__img,
+.form-group__input,
+.form-group__textarea {
     width: 100%;
 }
 
 .slider-content__img,
 .service-bottom__img {
     height: 100%;
+}
+
+.blog-box__text,
+.footer-content__form {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 
@@ -377,7 +398,6 @@ ul {
 }
 
 .blog-box__text {
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     height: 14.7em;
     padding: 1.5em;
     margin-top: -5px;
@@ -434,6 +454,24 @@ ul {
 .footer-content__link-box__DigitalSeed {
     margin-top: 1em;
     padding: .7em;
+}
+
+.page-btn {
+    padding: 0.9em 1.5em;
+    cursor: pointer;
+}
+
+.page-btn__img {
+    width: 20%;
+    top: .15em;
+    margin-left: .3em;
+}
+
+.form-group__input,
+.form-group__textarea {
+    border: 1px solid #001647;
+    padding: 1em;
+    margin: 0.7em 0;
 }
 
 
