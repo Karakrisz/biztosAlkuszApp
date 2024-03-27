@@ -1,21 +1,15 @@
-<template>
-    <div class="kapcsolat">
-        <h1>Kapcsolat</h1>
-        <p>Ez a kapcsolati oldal. Ide írhatod a kapcsolatfelvételi információkat.</p>
-        <NuxtLink to="/">Vissza a Főoldalra</NuxtLink>
-    </div>
-</template>
-
-<script>
-export default {
-    head() {
-        return {
-            title: 'Kapcsolat',
-        };
-    },
-};
+<script setup lang="ts">
+  useHead({
+    title: 'Kapcsolat',
+  })
 </script>
 
-<style scoped>
+<template>
+  <div class="kapcsolat">
+    <h1>Kapcsolat</h1>
+    <p>Ez a kapcsolati oldal. Ide írhatod a kapcsolatfelvételi információkat.</p>
+    <NuxtLink to="/">Vissza a Főoldalra</NuxtLink>
+  </div>
+</template>
 
-</style>
+<style scoped></style>
