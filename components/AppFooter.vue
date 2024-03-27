@@ -7,21 +7,21 @@
                 <div class="contact-form">
                     <form @submit.prevent="sendEmail">
                         <div class="contact-form__grid-box grid-2">
-                            <div class="form-group">
+                            <div class="form-group form-group--margin-right">
                                 <input class="form-group__input" placeholder="Vezetéknév *" type="text" id="firstname"
                                     v-model="form.firstname" required>
                             </div>
-                            <div class="form-group">
+                            <div class="form-group form-group--margin-left">
                                 <input class="form-group__input" placeholder="Keresztnév *" type="text" id="lastname"
                                     v-model="form.lastname" required>
                             </div>
                         </div>
                         <div class="contact-form__grid-box grid-2">
-                            <div class="form-group">
+                            <div class="form-group form-group--margin-right">
                                 <input class="form-group__input" placeholder="E-mail cím *" type="email" id="email"
                                     v-model="form.email" required>
                             </div>
-                            <div class="form-group">
+                            <div class="form-group form-group--margin-left">
                                 <input class="form-group__input" placeholder="Telefonszám" type="text" id="phonenumber"
                                     v-model="form.phonenumber" required>
                             </div>

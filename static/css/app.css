@@ -349,6 +349,7 @@ ul {
 .service-box {
     margin: 0.5em;
     padding: 5em 1.5em 1.5em 1.5em;
+    height: 20em;
 }
 
 .service-box__title {
@@ -379,7 +380,7 @@ ul {
 }
 
 .service-box__link-box {
-    bottom: 2em;
+    bottom: 3em;
     left: 34%;
 }
 
@@ -440,6 +441,7 @@ ul {
 
 .footer-content__form {
     margin: 0 5em;
+    padding: 7em;
 }
 
 .footer-content__link-box {
@@ -472,6 +474,19 @@ ul {
     border: 1px solid #001647;
     padding: 1em;
     margin: 0.7em 0;
+}
+
+.form-group--margin-right {
+    margin-right: .5em;
+}
+
+.form-group--margin-left {
+    margin-left: .5em;
+}
+
+.footer-content__link-box__img {
+    width: 12.5%;
+    margin: -3.5em 0 3.5em 0;
 }
 
 
