@@ -34,7 +34,7 @@ const links = [
                 ]"
               >
                 <template v-if="link.imagePath">
-                  <img :src="link.imagePath" :alt="link.name" />
+                  <img class="menu__list__li__img" :src="link.imagePath" :alt="link.name" />
                 </template>
                 <template v-else>
                   {{ link.name }}
