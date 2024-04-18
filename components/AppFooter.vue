@@ -23,7 +23,9 @@ const sendEmail = () => console.log(form.value)
   <footer>
     <div class="footer-content">
       <div class="footer-content__form bg-color-w">
-        <h5 class="footer-content__form__h5 text-transform-uppercase text-center">
+        <h5
+          class="footer-content__form__h5 text-transform-uppercase text-center"
+        >
           VEGYÜK FEL A KAPCSOLATOT!
         </h5>
         <div class="contact-form">
@@ -100,7 +102,7 @@ const sendEmail = () => console.log(form.value)
           alt="Biztos Alkuszom"
           class="footer-content__link-box__img"
         />
-        <div class="footer-content__link-box__links">
+        <div class="footer-content__link-box__links d-flex">
           <NuxtLink
             v-for="link in links"
             :key="link.path"

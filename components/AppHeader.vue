@@ -8,6 +8,8 @@ const links = [
   { name: 'Kapcsolat', path: '/kapcsolat' },
   { name: 'Facebook', path: '/logo', imagePath: '/img/header/facebook.svg' },
 ]
+
+const isMenuOpen = ref(false)
 </script>
 
 <template>
@@ -23,7 +25,16 @@ const links = [
         </a>
       </div>
       <div class="nav-box header-content__nav-box">
-        <nav class="menu">
+        <button
+          @click="isMenuOpen = !isMenuOpen"
+          class="hamburger"
+          :class="{ open: isMenuOpen }"
+        >
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </button>
+        <nav :class="{ 'menu--open': isMenuOpen, menu: true }" id="menu">
           <ul id="menu__list" class="menu__list d-flex">
             <li v-for="link in links" :key="link.path" class="menu__list__li">
               <NuxtLink
@@ -34,7 +45,11 @@ const links = [
                 ]"
               >
                 <template v-if="link.imagePath">
-                  <img class="menu__list__li__img" :src="link.imagePath" :alt="link.name" />
+                  <img
+                    class="menu__list__li__img"
+                    :src="link.imagePath"
+                    :alt="link.name"
+                  />
                 </template>
                 <template v-else>
                   {{ link.name }}
