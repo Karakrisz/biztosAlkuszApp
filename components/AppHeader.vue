@@ -24,7 +24,7 @@ const isMenuOpen = ref(false)
           />
         </a>
       </div>
-      <div class="nav-box header-content__nav-box">
+      <div class="nav-box header-content__nav-box d-flex">
         <button
           @click="isMenuOpen = !isMenuOpen"
           class="hamburger"
