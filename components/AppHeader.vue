@@ -6,7 +6,7 @@ const links = [
   { name: 'Dokumentumok', path: '/dokumentumok' },
   { name: 'Ajánlatkérés', path: '/ajanlatkeres' },
   { name: 'Kapcsolat', path: '/kapcsolat' },
-  { name: 'Facebook', path: '/logo', imagePath: '/img/header/facebook.svg' },
+  { name: 'Facebook', path: '/', imagePath: '/img/header/facebook.svg' },
 ]
 
 const isMenuOpen = ref(false)

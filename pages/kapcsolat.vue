@@ -1,13 +1,12 @@
-<script setup lang="ts">
-  useHead({
-    title: 'Kapcsolat',
-  })
+<script setup>
+useHead({
+  title: 'Kapcsolat',
+})
 </script>
 
 <template>
   <div class="kapcsolat">
-    <h1>Kapcsolat</h1>
-    <p>Ez a kapcsolati oldal. Ide írhatod a kapcsolatfelvételi információkat.</p>
+    <h2>Kapcsolat</h2>
     <NuxtLink to="/">Vissza a Főoldalra</NuxtLink>
   </div>
 </template>
