@@ -2,7 +2,7 @@
   <div>
     <section>
       <div class="slider-content">
-        <img
+        <NuxtImg
           class="slider-content__img"
           src="/img/slider/slider.webp"
           alt="Biztos Alkuszom"
@@ -20,7 +20,7 @@
 
         <div class="partners-content__img-box grid-7">
           <div class="partners-content__img-box__div text-center">
-            <img
+            <NuxtImg
               class="partners-content__img-box__div__img"
               src="/img/partners/partners.svg"
               alt="Biztos Alkuszom"
@@ -28,7 +28,7 @@
           </div>
 
           <div class="partners-content__img-box__div text-center">
-            <img
+            <NuxtImg
               class="partners-content__img-box__div__img"
               src="/img/partners/partners2.svg"
               alt="Biztos Alkuszom"
@@ -36,7 +36,7 @@
           </div>
 
           <div class="partners-content__img-box__div text-center">
-            <img
+            <NuxtImg
               class="partners-content__img-box__div__img"
               src="/img/partners/partners3.svg"
               alt="Biztos Alkuszom"
@@ -44,7 +44,7 @@
           </div>
 
           <div class="partners-content__img-box__div text-center">
-            <img
+            <NuxtImg
               class="partners-content__img-box__div__img"
               src="/img/partners/partners4.svg"
               alt="Biztos Alkuszom"
@@ -52,7 +52,7 @@
           </div>
 
           <div class="partners-content__img-box__div text-center">
-            <img
+            <NuxtImg
               class="partners-content__img-box__div__img"
               src="/img/partners/partners5.svg"
               alt="Biztos Alkuszom"
@@ -60,7 +60,7 @@
           </div>
 
           <div class="partners-content__img-box__div text-center">
-            <img
+            <NuxtImg
               class="partners-content__img-box__div__img"
               src="/img/partners/partners6.svg"
               alt="Biztos Alkuszom"
@@ -68,7 +68,7 @@
           </div>
 
           <div class="partners-content__img-box__div text-center">
-            <img
+            <NuxtImg
               class="partners-content__img-box__div__img"
               src="/img/partners/partners7.svg"
               alt="Biztos Alkuszom"
@@ -78,7 +78,7 @@
 
         <div class="partners-content__img-box grid-7">
           <div class="partners-content__img-box__div text-center">
-            <img
+            <NuxtImg
               class="partners-content__img-box__div__img"
               src="/img/partners/partners8.svg"
               alt="Biztos Alkuszom"
@@ -86,7 +86,7 @@
           </div>
 
           <div class="partners-content__img-box__div text-center">
-            <img
+            <NuxtImg
               class="partners-content__img-box__div__img"
               src="/img/partners/partners9.svg"
               alt="Biztos Alkuszom"
@@ -94,7 +94,7 @@
           </div>
 
           <div class="partners-content__img-box__div text-center">
-            <img
+            <NuxtImg
               class="partners-content__img-box__div__img"
               src="/img/partners/partners10.svg"
               alt="Biztos Alkuszom"
@@ -102,7 +102,7 @@
           </div>
 
           <div class="partners-content__img-box__div text-center">
-            <img
+            <NuxtImg
               class="partners-content__img-box__div__img"
               src="/img/partners/partners11.svg"
               alt="Biztos Alkuszom"
@@ -110,7 +110,7 @@
           </div>
 
           <div class="partners-content__img-box__div text-center">
-            <img
+            <NuxtImg
               class="partners-content__img-box__div__img"
               src="/img/partners/partners12.svg"
               alt="Biztos Alkuszom"
@@ -118,7 +118,7 @@
           </div>
 
           <div class="partners-content__img-box__div text-center">
-            <img
+            <NuxtImg
               class="partners-content__img-box__div__img"
               src="/img/partners/partners13.svg"
               alt="Biztos Alkuszom"
@@ -126,7 +126,7 @@
           </div>
 
           <div class="partners-content__img-box__div text-center">
-            <img
+            <NuxtImg
               class="partners-content__img-box__div__img"
               src="/img/partners/partners14.svg"
               alt="Biztos Alkuszom"
@@ -146,7 +146,7 @@
 
         <div class="servive-grid servive-grid--margin-bottom grid-3">
           <div class="service-box bg-color-w position-relative">
-            <img
+            <NuxtImg
               class="service-box__img"
               src="/img/services/gepjarmubiztositas.svg"
               alt="Biztos Alkuszom"
@@ -165,7 +165,7 @@
             <div class="service-box__link-box position-absolute">
               <a class="page-link text-color-w" href="#"
                 >Tovább
-                <img
+                <NuxtImg
                   class="page-link__img position-relative"
                   src="/img/partners/right-arrow.svg"
                   alt="Biztos Alkuszom"
@@ -175,7 +175,7 @@
           </div>
 
           <div class="service-box bg-color-w position-relative">
-            <img
+            <NuxtImg
               class="service-box__img"
               src="/img/services/utazasbiztositas.svg"
               alt="Biztos Alkuszom"
@@ -195,7 +195,7 @@
             <div class="service-box__link-box position-absolute">
               <a class="page-link text-color-w" href="#"
                 >Tovább
-                <img
+                <NuxtImg
                   class="page-link__img position-relative"
                   src="/img/partners/right-arrow.svg"
                   alt="Biztos Alkuszom"
@@ -205,7 +205,7 @@
           </div>
 
           <div class="service-box bg-color-w position-relative">
-            <img
+            <NuxtImg
               class="service-box__img"
               src="/img/services/gepjarmubiztositas.svg"
               alt="Biztos Alkuszom"
@@ -225,7 +225,7 @@
             <div class="service-box__link-box position-absolute">
               <a class="page-link text-color-w" href="#"
                 >Tovább
-                <img
+                <NuxtImg
                   class="page-link__img position-relative"
                   src="/img/partners/right-arrow.svg"
                   alt="Biztos Alkuszom"
@@ -237,7 +237,7 @@
 
         <div class="servive-grid grid-3">
           <div class="service-box bg-color-w position-relative">
-            <img
+            <NuxtImg
               class="service-box__img"
               src="/img/services/rendezveny_biztositas.svg"
               alt="Biztos Alkuszom"
@@ -258,7 +258,7 @@
             <div class="service-box__link-box position-absolute">
               <a class="page-link text-color-w" href="#"
                 >Tovább
-                <img
+                <NuxtImg
                   class="page-link__img position-relative"
                   src="/img/partners/right-arrow.svg"
                   alt="Biztos Alkuszom"
@@ -268,7 +268,7 @@
           </div>
 
           <div class="service-box bg-color-w position-relative">
-            <img
+            <NuxtImg
               class="service-box__img"
               src="/img/services/karbejelentes.svg"
               alt="Biztos Alkuszom"
@@ -288,7 +288,7 @@
             <div class="service-box__link-box position-absolute">
               <a class="page-link text-color-w" href="#"
                 >Tovább
-                <img
+                <NuxtImg
                   class="page-link__img position-relative"
                   src="/img/partners/right-arrow.svg"
                   alt="Biztos Alkuszom"
@@ -298,7 +298,7 @@
           </div>
 
           <div class="service-box bg-color-w position-relative">
-            <img
+            <NuxtImg
               class="service-box__img"
               src="/img/services/szemelyes_tanacsadas.svg"
               alt="Biztos Alkuszom"
@@ -319,7 +319,7 @@
             <div class="service-box__link-box position-absolute">
               <a class="page-link text-color-w" href="#"
                 >Tovább
-                <img
+                <NuxtImg
                   class="page-link__img position-relative"
                   src="/img/partners/right-arrow.svg"
                   alt="Biztos Alkuszom"
@@ -331,7 +331,7 @@
       </div>
 
       <div class="service-bottom position-relative">
-        <img
+        <NuxtImg
           class="service-bottom__img"
           src="/img/partners/bottom.svg"
           alt="Biztos Alkuszom"
@@ -353,7 +353,7 @@
         </div>
         <div class="blog-grid grid-3">
           <div class="blog-box">
-            <img
+            <NuxtImg
               class="blog-box__img"
               src="/img/blog/blog.svg"
               alt="Biztos Alkuszom"
@@ -375,7 +375,7 @@
             </div>
           </div>
           <div class="blog-box">
-            <img
+            <NuxtImg
               class="blog-box__img"
               src="/img/blog/blog1.svg"
               alt="Biztos Alkuszom"
@@ -397,7 +397,7 @@
             </div>
           </div>
           <div class="blog-box">
-            <img
+            <NuxtImg
               class="blog-box__img"
               src="/img/blog/blog3.svg"
               alt="Biztos Alkuszom"

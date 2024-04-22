@@ -17,7 +17,7 @@ const isMenuOpen = ref(false)
     <div class="header-content d-flex">
       <div class="logo-box header-content__logo-box">
         <a href="/" class="header-content__logo-box__link">
-          <img
+          <NuxtImg
             src="/img/header/logo.svg"
             alt="Biztos Alkuszom"
             class="header-content__logo-box__link__img"
@@ -39,10 +39,7 @@ const isMenuOpen = ref(false)
             <li v-for="link in links" :key="link.path" class="menu__list__li">
               <NuxtLink
                 :to="link.path"
-                :class="[
-                  'menu__item text-color text-transform-uppercase',
-                  { 'menu__item--border-left': link.path === '/' },
-                ]"
+                :class="['menu__item text-color text-transform-uppercase']"
               >
                 <template v-if="link.imagePath">
                   <img
@@ -74,7 +71,7 @@ const isMenuOpen = ref(false)
           href="tel:+36302345866"
           class="header-bottom__div-linkbox__link text-color-w"
         >
-          <img
+          <NuxtImg
             src="/img/header/mobile.svg"
             alt="Biztos Alkuszom"
             class="header-bottom__div-linkbox__link__img position-relative"
@@ -85,7 +82,7 @@ const isMenuOpen = ref(false)
           href="mailto:biztos@alkuszom.info"
           class="header-bottom__div-linkbox__link text-color-w"
         >
-          <img
+          <NuxtImg
             src="/img/header/mail.svg"
             alt="Biztos Alkuszom"
             class="header-bottom__div-linkbox__link__img header-bottom__div-linkbox__link__img--margin-left position-relative"

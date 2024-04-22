@@ -86,7 +86,7 @@ const sendEmail = () => console.log(form.value)
             <div class="contact-form__btn-box t-end">
               <button class="page-btn text-color-w" type="submit">
                 Küldés
-                <img
+                <NuxtImg
                   class="page-btn__img position-relative"
                   src="/img/btn-arrow.svg"
                   alt="Biztos Alkuszom"
@@ -97,7 +97,7 @@ const sendEmail = () => console.log(form.value)
         </div>
       </div>
       <div class="footer-content__link-box text-center">
-        <img
+        <NuxtImg
           src="/img/footer/logo.svg"
           alt="Biztos Alkuszom"
           class="footer-content__link-box__img"
