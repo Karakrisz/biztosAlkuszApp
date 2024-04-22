@@ -21,7 +21,12 @@ const sendEmail = () => console.log(form.value)
 
 <template>
   <footer>
-    <div class="footer-content">
+    <div class="footer-content position-relative">
+      <div class="page__header page__header--right">
+        <h3 class="page__header__h3 text-color-w text-transform-uppercase">
+            AJÁNLATKÉRÉS
+        </h3>
+      </div>
       <div class="footer-content__form bg-color-w">
         <h5
           class="footer-content__form__h5 text-transform-uppercase text-center"
