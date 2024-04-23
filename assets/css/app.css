@@ -267,11 +267,15 @@ ul {
 .menu__item,
 .header-bottom__div__h1,
 .header-bottom__div-linkbox__link {
-  font-size: 0.95rem;
+  font-size: 1.7rem;
 }
 
 .menu__item {
   padding-left: 2.5em;
+}
+
+.menu__list__li__img {
+  width: 45%;
 }
 
 .menu__list__li:first-child {
@@ -384,7 +388,7 @@ ul {
 }
 
 .blog-grid {
-    padding: 1em 5em 3em 5em;
+  padding: 1em 5em 3em 5em;
 }
 
 .blog-box__text {
