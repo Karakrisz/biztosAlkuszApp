@@ -1,12 +1,109 @@
+<script setup lang="ts">
+import { ref, computed } from 'vue'
+
+const sliderElem = ref([
+  {
+    title: 'Biztosítás, ami Mozgásban Tart',
+    description:
+      'Biztosítási megoldásaink folyamatosan alkalmazkodnak az életed változásaihoz. Legyen szó karrierváltásról, családalapításról vagy akár új hobbik felfedezéséről, mi mindig ott vagyunk, hogy támogassunk és védelmezzünk.',
+    button: 'Tovább',
+  },
+  {
+    title: 'Biztosítás, ami Mozgásban Tart',
+    description:
+      'Biztosítási megoldásaink folyamatosan alkalmazkodnak az életed változásaihoz. Legyen szó karrierváltásról, családalapításról vagy akár új hobbik felfedezéséről, mi mindig ott vagyunk, hogy támogassunk és védelmezzünk.',
+    button: 'Tovább',
+  },
+  {
+    title: 'Biztosítás, ami Mozgásban Tart',
+    description:
+      'Biztosítási megoldásaink folyamatosan alkalmazkodnak az életed változásaihoz. Legyen szó karrierváltásról, családalapításról vagy akár új hobbik felfedezéséről, mi mindig ott vagyunk, hogy támogassunk és védelmezzünk.',
+    button: 'Tovább',
+  },
+])
+
+const currentSlide = ref(0)
+
+const nextSlide = () => {
+  if (currentSlide.value < sliderElem.value.length - 1) {
+    currentSlide.value++
+  } else {
+    currentSlide.value = 0
+  }
+}
+
+const prevSlide = () => {
+  if (currentSlide.value > 0) {
+    currentSlide.value--
+  } else {
+    currentSlide.value = sliderElem.value.length - 1
+  }
+}
+</script>
 <template>
   <div>
     <section>
-      <div class="slider-content">
+      <div class="slider-content position-relative">
         <NuxtImg
           class="slider-content__img"
           src="/img/slider/slider.webp"
           alt="Biztos Alkuszom"
         />
+        <div class="slider-content__margin-box">
+          <div class="slider-content__carousel-content text-center">
+            <div class="carousel position-relative">
+              <div
+                class="carousel-slide d-flex"
+                :style="{ transform: `translateX(-${currentSlide * 100}%)` }"
+              >
+                <div
+                  class="carousel-item"
+                  v-for="(item, index) in sliderElem"
+                  :key="index"
+                >
+                  <h1
+                    class="carousel-item__h1 text-transform-uppercase text-color f-400"
+                  >
+                    {{ item.title }}
+                  </h1>
+                  <p class="carousel-item__p text-color f-400">
+                    {{ item.description }}
+                  </p>
+                  <NuxtLink class="carousel-item__NuxtLink bg-color-w f-300"
+                    >{{ item.button }}
+                    <NuxtImg
+                      class="carousel-item__NuxtLink__img"
+                      src="/img/slider/about-r.svg"
+                      alt="Biztos Alkuszom"
+                    />
+                  </NuxtLink>
+                  <div class="carousel__btn-content">
+                    <button
+                      class="carousel__btn-content__btn"
+                      @click="prevSlide"
+                    >
+                      <NuxtImg
+                        class="carousel__btn-content__btn__img"
+                        src="/img/slider/arrow-l.svg"
+                        alt="Biztos Alkuszom"
+                      />
+                    </button>
+                    <button
+                      class="carousel__btn-content__btn"
+                      @click="nextSlide"
+                    >
+                      <NuxtImg
+                        class="carousel__btn-content__btn__img"
+                        src="/img/slider/arrow-r.svg"
+                        alt="Biztos Alkuszom"
+                      />
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 

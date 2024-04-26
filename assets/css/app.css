@@ -197,7 +197,8 @@ ul {
 }
 
 .page-link,
-.page-btn {
+.page-btn,
+.carousel-item__NuxtLink {
   padding: 0.5em 1.5em;
 }
 
@@ -310,6 +311,40 @@ ul {
 /********************  Header formating end **********************/
 
 /********************  Slider formating start **********************/
+
+.slider-content__margin-box {
+  margin-top: -26.5em;
+  padding-bottom: 7em;
+}
+
+.carousel {
+  overflow: hidden;
+}
+
+.carousel-slide {
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+  min-width: 100%;
+  padding: 2em;
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(5.949999809265137px);
+}
+
+.carousel-control {
+  cursor: pointer;
+}
+
+.slider-content__carousel-content {
+  width: 40em;
+  margin: auto;
+}
+
+.carousel-item__p {
+  margin-bottom: 2em;
+  text-align: left;
+}
 
 /********************  Slider formating end **********************/
 
