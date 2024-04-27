@@ -61,25 +61,28 @@ const prevSlide = () => {
                   v-for="(item, index) in sliderElem"
                   :key="index"
                 >
-                  <h1
-                    class="carousel-item__h1 text-transform-uppercase text-color f-400"
-                  >
-                    {{ item.title }}
-                  </h1>
-                  <p class="carousel-item__p text-color f-400">
-                    {{ item.description }}
-                  </p>
-                  <NuxtLink class="carousel-item__NuxtLink bg-color-w f-300"
+                  <div class="carousel-item__padding-box">
+                    <h1
+                      class="carousel-item__h1 text-transform-uppercase text-color f-700"
+                    >
+                      {{ item.title }}
+                    </h1>
+                    <p class="carousel-item__p text-color f-400">
+                      {{ item.description }}
+                    </p>
+                  </div>
+                  <NuxtLink
+                    class="carousel-item__NuxtLink text-color bg-color-w f-600"
                     >{{ item.button }}
                     <NuxtImg
-                      class="carousel-item__NuxtLink__img"
+                      class="carousel-item__NuxtLink__img position-relative"
                       src="/img/slider/about-r.svg"
                       alt="Biztos Alkuszom"
                     />
                   </NuxtLink>
-                  <div class="carousel__btn-content">
+                  <div class="carousel__btn-content position-relative d-flex">
                     <button
-                      class="carousel__btn-content__btn"
+                      class="carousel__btn-content__btn cursor"
                       @click="prevSlide"
                     >
                       <NuxtImg
@@ -89,7 +92,7 @@ const prevSlide = () => {
                       />
                     </button>
                     <button
-                      class="carousel__btn-content__btn"
+                      class="carousel__btn-content__btn cursor"
                       @click="nextSlide"
                     >
                       <NuxtImg
