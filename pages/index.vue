@@ -63,7 +63,7 @@ const prevSlide = () => {
                 >
                   <div class="carousel-item__padding-box">
                     <h1
-                      class="carousel-item__h1 text-transform-uppercase text-color f-700"
+                      class="carousel-item__h1 text-transform-uppercase text-color f-700 t-left"
                     >
                       {{ item.title }}
                     </h1>
@@ -263,14 +263,14 @@ const prevSlide = () => {
               </p>
             </div>
             <div class="service-box__link-box position-absolute">
-              <a class="page-link text-color-w" href="#"
+              <NuxtLink to="gepjarmu-biztositas" class="page-link text-color-w f-600"
                 >Tovább
                 <NuxtImg
                   class="page-link__img position-relative"
                   src="/img/partners/right-arrow.svg"
                   alt="Biztos Alkuszom"
                 />
-              </a>
+              </NuxtLink>
             </div>
           </div>
 
@@ -293,14 +293,14 @@ const prevSlide = () => {
               </p>
             </div>
             <div class="service-box__link-box position-absolute">
-              <a class="page-link text-color-w" href="#"
+              <NuxtLink class="page-link text-color-w f-600"
                 >Tovább
                 <NuxtImg
                   class="page-link__img position-relative"
                   src="/img/partners/right-arrow.svg"
                   alt="Biztos Alkuszom"
                 />
-              </a>
+              </NuxtLink>
             </div>
           </div>
 
@@ -323,14 +323,14 @@ const prevSlide = () => {
               </p>
             </div>
             <div class="service-box__link-box position-absolute">
-              <a class="page-link text-color-w" href="#"
+              <NuxtLink class="page-link text-color-w f-600"
                 >Tovább
                 <NuxtImg
                   class="page-link__img position-relative"
                   src="/img/partners/right-arrow.svg"
                   alt="Biztos Alkuszom"
                 />
-              </a>
+              </NuxtLink>
             </div>
           </div>
         </div>
@@ -356,14 +356,14 @@ const prevSlide = () => {
               </p>
             </div>
             <div class="service-box__link-box position-absolute">
-              <a class="page-link text-color-w" href="#"
+              <NuxtLink class="page-link text-color-w f-600"
                 >Tovább
                 <NuxtImg
                   class="page-link__img position-relative"
                   src="/img/partners/right-arrow.svg"
                   alt="Biztos Alkuszom"
                 />
-              </a>
+              </NuxtLink>
             </div>
           </div>
 
@@ -386,14 +386,14 @@ const prevSlide = () => {
               </p>
             </div>
             <div class="service-box__link-box position-absolute">
-              <a class="page-link text-color-w" href="#"
+              <NuxtLink class="page-link text-color-w f-600"
                 >Tovább
                 <NuxtImg
                   class="page-link__img position-relative"
                   src="/img/partners/right-arrow.svg"
                   alt="Biztos Alkuszom"
                 />
-              </a>
+              </NuxtLink>
             </div>
           </div>
 
@@ -417,14 +417,14 @@ const prevSlide = () => {
               </p>
             </div>
             <div class="service-box__link-box position-absolute">
-              <a class="page-link text-color-w" href="#"
+              <NuxtLink class="page-link text-color-w f-600"
                 >Tovább
                 <NuxtImg
                   class="page-link__img position-relative"
                   src="/img/partners/right-arrow.svg"
                   alt="Biztos Alkuszom"
                 />
-              </a>
+              </NuxtLink>
             </div>
           </div>
         </div>
