@@ -268,8 +268,7 @@ ul {
 .header-content,
 .header-content__nav-box,
 .header-bottom,
-.menu__list,
-.subpage-services__img-text-box {
+.menu__list {
   align-items: center;
 }
 
@@ -593,6 +592,18 @@ ul {
   padding: 3em 5em 0 5em;
 }
 
+.subpage-services__img-text-box {
+  flex-direction: column;
+  padding: 5em;
+}
+
+.subpage-services__img-text-box__text-box__ul__li {
+  padding: 0.3em 0;
+}
+
+.subpage-services__img-text-box__text-box__ul {
+  padding-left: 1.5em;
+}
 /********************  Subpage formating formating end **********************/
 
 /********************  Media formating start **********************/
