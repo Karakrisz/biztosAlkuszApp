@@ -1,4 +1,12 @@
 <script setup>
+import { ref, computed } from 'vue'
+import { useRoute } from 'vue-router'
+
+const specialPath = '/gepjarmu-biztositas'
+const route = useRoute()
+
+const isSpecialPage = computed(() => route.path === specialPath)
+
 const links = [
   { name: 'Főoldal', path: '/' },
   { name: 'Partnerek', path: '/partnerek' },
@@ -21,10 +29,15 @@ const sendEmail = () => console.log(form.value)
 
 <template>
   <footer>
-    <div class="footer-content position-relative">
-      <div class="page__header page__header--right page__header page__header--right--format">
+    <div
+      :class="['footer-content', { 'footer-bg-special': isSpecialPage }]"
+      class="position-relative"
+    >
+      <div
+        class="page__header page__header--right page__header page__header--right--format"
+      >
         <h3 class="page__header__h3 text-color-w text-transform-uppercase">
-            AJÁNLATKÉRÉS
+          AJÁNLATKÉRÉS
         </h3>
       </div>
       <div class="footer-content__form bg-color-w">
@@ -101,7 +114,13 @@ const sendEmail = () => console.log(form.value)
           </form>
         </div>
       </div>
-      <div class="footer-content__link-box text-center">
+      <div
+        :class="[
+          'footer-content__link-box',
+          { 'footer-content__link-box-bg-special': isSpecialPage },
+        ]"
+        class="text-center"
+      >
         <NuxtImg
           src="/img/footer/logo.svg"
           alt="Biztos Alkuszom"
@@ -112,7 +131,10 @@ const sendEmail = () => console.log(form.value)
             v-for="link in links"
             :key="link.path"
             :to="link.path"
-            class="footer-link"
+            :class="[
+              'footer-link',
+              { 'footer-link-color-special': isSpecialPage },
+            ]"
           >
             {{ link.name }}
           </NuxtLink>

@@ -510,6 +510,18 @@ ul {
   background: #e2efff;
 }
 
+.footer-bg-special {
+  background-color: #001647;
+}
+
+.footer-content__link-box-bg-special {
+  background-color: #e2efff;
+}
+
+.footer-link-color-special {
+  color: #001647 !important;
+}
+
 .footer-content {
   padding-top: 3.5em;
 }
