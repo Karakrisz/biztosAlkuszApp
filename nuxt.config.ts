@@ -51,8 +51,10 @@ export default defineNuxtConfig({
     gzip: true,
     exclude: ['/secret-page'],
     routes: async () => {
-      // Itt lehet adatbázisból vagy API-ból dinamikusan útvonalakat generálni
       return []
     },
+  },
+  site: {
+    url: 'https://www.alkuszom.info',
   },
 })
