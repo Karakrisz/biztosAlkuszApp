@@ -12,8 +12,14 @@ export default defineNuxtConfig({
       meta: [
         { charset: 'utf-8' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-        { hid: 'description', name: 'description', content: '' },
+        {
+          hid: 'description',
+          name: 'description',
+          content:
+            'Személyre szabott biztosítási megoldások mindenkinek. Megbízható alkusz a biztosítási piacon.',
+        },
         { name: 'format-detection', content: 'telephone=no' },
+        { hid: 'robots', name: 'robots', content: 'index, follow' },
         {
           'http-equiv': 'Content-Security-Policy',
           content: `
@@ -27,6 +33,7 @@ export default defineNuxtConfig({
       ],
       link: [
         { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+        { rel: 'canonical', href: 'https://www.alkuszom.info' },
         { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
         { rel: 'preconnect', href: 'https://fonts.gstatic.com' },
         {
@@ -37,5 +44,15 @@ export default defineNuxtConfig({
     },
   },
 
-  modules: ["@nuxt/image"]
+  modules: ['@nuxt/image', '@nuxtjs/sitemap'],
+
+  sitemap: {
+    hostname: 'https://www.alkuszom.info',
+    gzip: true,
+    exclude: ['/secret-page'],
+    routes: async () => {
+      // Itt lehet adatbázisból vagy API-ból dinamikusan útvonalakat generálni
+      return []
+    },
+  },
 })

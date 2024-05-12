@@ -8,7 +8,7 @@ const specialPaths = [
   '/tanulobiztositas',
   '/rendezvenyszolgalat',
   '/karbejentes',
-  '/szemelyes-tanacsadas'
+  '/szemelyes-tanacsadas',
 ]
 const route = useRoute()
 
@@ -101,6 +101,8 @@ const sendEmail = () => console.log(form.value)
             </div>
             <div class="form-group">
               <textarea
+                rows="9"
+                cols="300"
                 class="form-group__textarea"
                 placeholder="Milyen segítségre volna szüksége?"
                 id="message"
