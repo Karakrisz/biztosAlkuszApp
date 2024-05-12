@@ -2,10 +2,17 @@
 import { ref, computed } from 'vue'
 import { useRoute } from 'vue-router'
 
-const specialPath = '/gepjarmu-biztositas'
+const specialPaths = [
+  '/gepjarmu-biztositas',
+  '/utasbiztositas',
+  '/tanulobiztositas',
+  '/rendezvenyszolgalat',
+  '/karbejentes',
+  '/szemelyes-tanacsadas'
+]
 const route = useRoute()
 
-const isSpecialPage = computed(() => route.path === specialPath)
+const isSpecialPage = computed(() => specialPaths.includes(route.path))
 
 const links = [
   { name: 'Főoldal', path: '/' },

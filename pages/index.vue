@@ -263,7 +263,9 @@ const prevSlide = () => {
               </p>
             </div>
             <div class="service-box__link-box position-absolute">
-              <NuxtLink to="gepjarmu-biztositas" class="page-link text-color-w f-600"
+              <NuxtLink
+                to="gepjarmu-biztositas"
+                class="page-link text-color-w f-600"
                 >Tovább
                 <NuxtImg
                   class="page-link__img position-relative"
@@ -293,7 +295,7 @@ const prevSlide = () => {
               </p>
             </div>
             <div class="service-box__link-box position-absolute">
-              <NuxtLink class="page-link text-color-w f-600"
+              <NuxtLink to="utasbiztositas" class="page-link text-color-w f-600"
                 >Tovább
                 <NuxtImg
                   class="page-link__img position-relative"
@@ -307,14 +309,14 @@ const prevSlide = () => {
           <div class="service-box bg-color-w position-relative">
             <NuxtImg
               class="service-box__img"
-              src="/img/services/gepjarmubiztositas.svg"
+              src="/img/services/tanulobiztositas.svg"
               alt="Biztos Alkuszom"
             />
             <div class="service-box__text">
               <h3
                 class="service-box__title text-transform-uppercase text-center"
               >
-                Gépjármű biztosítás
+                TANULÓbiztosítás
               </h3>
               <p class="service-box__description">
                 A tanulóbiztosítás biztos háttér a diákok számára, hogy
@@ -323,7 +325,9 @@ const prevSlide = () => {
               </p>
             </div>
             <div class="service-box__link-box position-absolute">
-              <NuxtLink class="page-link text-color-w f-600"
+              <NuxtLink
+                to="tanulobiztositas"
+                class="page-link text-color-w f-600"
                 >Tovább
                 <NuxtImg
                   class="page-link__img position-relative"
@@ -356,7 +360,7 @@ const prevSlide = () => {
               </p>
             </div>
             <div class="service-box__link-box position-absolute">
-              <NuxtLink class="page-link text-color-w f-600"
+              <NuxtLink to="rendezvenyszolgalat" class="page-link text-color-w f-600"
                 >Tovább
                 <NuxtImg
                   class="page-link__img position-relative"
@@ -386,7 +390,7 @@ const prevSlide = () => {
               </p>
             </div>
             <div class="service-box__link-box position-absolute">
-              <NuxtLink class="page-link text-color-w f-600"
+              <NuxtLink to="karbejentes" class="page-link text-color-w f-600"
                 >Tovább
                 <NuxtImg
                   class="page-link__img position-relative"
@@ -417,7 +421,7 @@ const prevSlide = () => {
               </p>
             </div>
             <div class="service-box__link-box position-absolute">
-              <NuxtLink class="page-link text-color-w f-600"
+              <NuxtLink to="szemelyes-tanacsadas" class="page-link text-color-w f-600"
                 >Tovább
                 <NuxtImg
                   class="page-link__img position-relative"

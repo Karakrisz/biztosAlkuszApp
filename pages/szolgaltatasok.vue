@@ -33,7 +33,9 @@ useHead({
               </p>
             </div>
             <div class="service-box__link-box position-absolute">
-              <NuxtLink class="page-link text-color-w f-600"
+              <NuxtLink
+                to="gepjarmu-biztositas"
+                class="page-link text-color-w f-600"
                 >Tovább
                 <NuxtImg
                   class="page-link__img position-relative"
@@ -63,7 +65,7 @@ useHead({
               </p>
             </div>
             <div class="service-box__link-box position-absolute">
-              <NuxtLink class="page-link text-color-w f-600"
+              <NuxtLink to="utasbiztositas" class="page-link text-color-w f-600"
                 >Tovább
                 <NuxtImg
                   class="page-link__img position-relative"
@@ -77,14 +79,14 @@ useHead({
           <div class="service-box bg-color-w position-relative">
             <NuxtImg
               class="service-box__img"
-              src="/img/services/gepjarmubiztositas.svg"
+              src="/img/services/tanulobiztositas.svg"
               alt="Biztos Alkuszom"
             />
             <div class="service-box__text">
               <h3
                 class="service-box__title text-transform-uppercase text-center"
               >
-                Gépjármű biztosítás
+                TANULÓbiztosítás
               </h3>
               <p class="service-box__description">
                 A tanulóbiztosítás biztos háttér a diákok számára, hogy
@@ -93,7 +95,9 @@ useHead({
               </p>
             </div>
             <div class="service-box__link-box position-absolute">
-              <NuxtLink class="page-link text-color-w f-600"
+              <NuxtLink
+                to="tanulobiztositas"
+                class="page-link text-color-w f-600"
                 >Tovább
                 <NuxtImg
                   class="page-link__img position-relative"
@@ -126,7 +130,9 @@ useHead({
               </p>
             </div>
             <div class="service-box__link-box position-absolute">
-              <NuxtLink class="page-link text-color-w f-600"
+              <NuxtLink
+                to="rendezvenyszolgalat"
+                class="page-link text-color-w f-600"
                 >Tovább
                 <NuxtImg
                   class="page-link__img position-relative"
@@ -156,7 +162,7 @@ useHead({
               </p>
             </div>
             <div class="service-box__link-box position-absolute">
-              <NuxtLink class="page-link text-color-w f-600"
+              <NuxtLink to="karbejentes" class="page-link text-color-w f-600"
                 >Tovább
                 <NuxtImg
                   class="page-link__img position-relative"
@@ -187,7 +193,9 @@ useHead({
               </p>
             </div>
             <div class="service-box__link-box position-absolute">
-              <NuxtLink class="page-link text-color-w f-600"
+              <NuxtLink
+                to="szemelyes-tanacsadas"
+                class="page-link text-color-w f-600"
                 >Tovább
                 <NuxtImg
                   class="page-link__img position-relative"
@@ -199,7 +207,20 @@ useHead({
           </div>
         </div>
       </div>
+
+      <div class="service-bottom position-relative">
+        <NuxtImg
+          class="service-bottom__img"
+          src="/img/partners/bottom.svg"
+          alt="Biztos Alkuszom"
+        />
+        <div class="service-bottom__box position-absolute bg-color-w">
+          <h4 class="service-bottom__box__title linear-font">
+            "Nálunk a biztosítás <br />
+            találkozik a bizalommal."
+          </h4>
+        </div>
+      </div>
     </section>
   </div>
 </template>
-
