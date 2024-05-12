@@ -23,11 +23,11 @@ useHead({
             />
             <div class="service-box__text">
               <h3
-                class="service-box__title text-transform-uppercase text-center"
+                class="service-box__title text-transform-uppercase text-color text-center"
               >
                 Gépjármű biztosítás
               </h3>
-              <p class="service-box__description">
+              <p class="service-box__description text-color">
                 Nyugodt utazást és védelmet nyújt minden kilométeren,
                 balesetektől kezdve a váratlan meghibásodásokig.
               </p>
@@ -54,11 +54,11 @@ useHead({
             />
             <div class="service-box__text">
               <h3
-                class="service-box__title text-transform-uppercase text-center"
+                class="service-box__title text-transform-uppercase text-color text-center"
               >
                 UTASbiztosítás
               </h3>
-              <p class="service-box__description">
+              <p class="service-box__description text-color">
                 A gondtalan kalandok záloga, amely biztonságot nyújt a világ
                 bármely pontján, legyen szó váratlan eseményekről vagy
                 egészségügyi sürgősségekről.
@@ -84,11 +84,11 @@ useHead({
             />
             <div class="service-box__text">
               <h3
-                class="service-box__title text-transform-uppercase text-center"
+                class="service-box__title text-transform-uppercase text-color text-center"
               >
                 TANULÓbiztosítás
               </h3>
-              <p class="service-box__description">
+              <p class="service-box__description text-color">
                 A tanulóbiztosítás biztos háttér a diákok számára, hogy
                 nyugodtan összpontosíthassanak tanulmányaikra, miközben
                 védelemben részesülnek az élet váratlan eseményei ellen.
@@ -118,11 +118,11 @@ useHead({
             />
             <div class="service-box__text">
               <h3
-                class="service-box__title text-transform-uppercase text-center"
+                class="service-box__title text-transform-uppercase text-color text-center"
               >
                 RENDEZVÉNYSZOLGÁLAT
               </h3>
-              <p class="service-box__description">
+              <p class="service-box__description text-color">
                 Biztosításaink magukban foglalják a felelősségbiztosítást, a
                 rendezvény helyszínének védelmét, valamint az egyedi igényekhez
                 igazodó kockázatkezelést, biztosítva ezzel a rendezvény
@@ -151,11 +151,11 @@ useHead({
             />
             <div class="service-box__text">
               <h3
-                class="service-box__title text-transform-uppercase text-center"
+                class="service-box__title text-transform-uppercase text-color text-center"
               >
                 Kárbejelentés
               </h3>
-              <p class="service-box__description">
+              <p class="service-box__description text-color">
                 A kárbejelentési folyamatunk során a biztosítási alkusz
                 szakértői segítséget és támogatást nyújtanak az ügyfeleknek,
                 hogy a kárbejelentés gyorsan és zökkenőmentesen történjen.
@@ -181,11 +181,11 @@ useHead({
             />
             <div class="service-box__text">
               <h3
-                class="service-box__title text-transform-uppercase text-center"
+                class="service-box__title text-transform-uppercase text-color text-center"
               >
                 Személyes tanácsadás
               </h3>
-              <p class="service-box__description">
+              <p class="service-box__description text-color">
                 személyre szabott tanácsadásunkkal biztosítjuk, hogy minden
                 ügyfél megkapja az egyéni igényeinek megfelelő biztosítási
                 tanácsokat és megoldásokat, biztosítva ezzel az optimális
@@ -205,20 +205,6 @@ useHead({
               </NuxtLink>
             </div>
           </div>
-        </div>
-      </div>
-
-      <div class="service-bottom position-relative">
-        <NuxtImg
-          class="service-bottom__img"
-          src="/img/partners/bottom.svg"
-          alt="Biztos Alkuszom"
-        />
-        <div class="service-bottom__box position-absolute bg-color-w">
-          <h4 class="service-bottom__box__title linear-font">
-            "Nálunk a biztosítás <br />
-            találkozik a bizalommal."
-          </h4>
         </div>
       </div>
     </section>

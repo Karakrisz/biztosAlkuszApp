@@ -8,7 +8,7 @@ const specialPaths = [
   '/tanulobiztositas',
   '/rendezvenyszolgalat',
   '/karbejentes',
-  '/szemelyes-tanacsadas',
+  '/szemelyes-tanacsadas'
 ]
 const route = useRoute()
 
@@ -49,7 +49,7 @@ const sendEmail = () => console.log(form.value)
       </div>
       <div class="footer-content__form bg-color-w">
         <h5
-          class="footer-content__form__h5 text-transform-uppercase text-center"
+          class="footer-content__form__h5 text-transform-uppercase text-center text-color"
         >
           VEGYÜK FEL A KAPCSOLATOT!
         </h5>
