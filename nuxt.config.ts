@@ -2,7 +2,7 @@
 export default defineNuxtConfig({
   devtools: { enabled: true },
   css: ['~/assets/css/app.css'],
-
+  ssr: true, // Győződj meg róla, hogy ez az érték true
   app: {
     head: {
       title: 'Biztos Alkuszom',
@@ -46,15 +46,8 @@ export default defineNuxtConfig({
 
   modules: ['@nuxt/image', '@nuxtjs/sitemap'],
 
-  sitemap: {
-    hostname: 'https://www.alkuszom.info',
-    gzip: true,
-    exclude: ['/secret-page'],
-    routes: async () => {
-      return []
-    },
-  },
   site: {
     url: 'https://www.alkuszom.info',
+    trailingSlash: true,
   },
 })

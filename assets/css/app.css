@@ -191,7 +191,7 @@ ul {
 .page__header {
   width: 19%;
   padding: 0.7em 2.5em 0.7em 5em;
-  margin: 1.5em 0 3em 0;
+  margin: 0.7em 0 3em 0;
   text-align: end;
 }
 
@@ -340,9 +340,16 @@ ul {
 
 /********************  Slider formating start **********************/
 
-.slider-content__margin-box {
+/* .slider-content__margin-box {
   margin-top: -41.5em;
   padding-bottom: 12em;
+} */
+
+
+.slider-content__ab-box {
+  bottom: 7em;
+  left: 0;
+  right: 0;
 }
 
 .carousel {
@@ -664,11 +671,11 @@ ul {
     font-size: 1.5rem;
   }
   .header-bottom__div-linkbox__link__img {
-    width: 25px;
+    width: 23px;
     height: 25px;
   }
   .menu__list__li__img {
-    width: 2em;
+    width: 1.6em;
   }
   .page__header__h2,
   .page__header__h3,
@@ -692,16 +699,16 @@ ul {
   .carousel-item__h1 {
     font-size: 2.2rem;
   }
-  .slider-content__margin-box {
+  /* .slider-content__margin-box {
     margin-top: -35.5em;
     padding-bottom: 12em;
-  }
+  } */
   .slider-content__carousel-content {
     width: 55em;
   }
   .carousel-item__NuxtLink__img {
-    width: 2.8%;
-    top: 0.15em;
+    width: 2.5%;
+    top: 0.12em;
   }
   .carousel-item {
     padding: 2.5em;
@@ -786,11 +793,11 @@ ul {
     font-size: 1.4rem;
   }
   .header-bottom__div-linkbox__link__img {
-    width: 25px;
-    height: 25px;
+    width: 23px;
+    height: 24px;
   }
   .menu__list__li__img {
-    width: 2em;
+    width: 1.6em;
   }
   .page__header__h2,
   .page__header__h3,
@@ -814,19 +821,19 @@ ul {
   .carousel-item__h1 {
     font-size: 2.2rem;
   }
-  .slider-content__margin-box {
+  /* .slider-content__margin-box {
     margin-top: -35.5em;
     padding-bottom: 12em;
-  }
+  } */
   .slider-content__carousel-content {
     width: 55em;
   }
   .carousel-item__NuxtLink__img {
-    width: 2.5%;
-    top: 0.15em;
+    width: 2.3%;
+    top: 0.16em;
   }
   .carousel__btn-content__btn__img {
-    width: 1.2em;
+    width: 1.1em;
   }
   .service-box__link-box {
     bottom: 3em;
@@ -872,7 +879,7 @@ ul {
     font-size: 1.3rem;
   }
   .footer-content__link-box__DigitalSeed__Nuxtlink {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
   }
   .subpage-services__img-text-box__img-box__img {
     width: 10em;
@@ -908,11 +915,11 @@ ul {
     font-size: 1.3rem;
   }
   .header-bottom__div-linkbox__link__img {
-    width: 25px;
-    height: 25px;
+    width: 22px;
+    height: 24px;
   }
   .menu__list__li__img {
-    width: 1.8em;
+    width: 1.6em;
   }
   .page__header__h2,
   .page__header__h3,
@@ -940,19 +947,19 @@ ul {
   .carousel-item__h1 {
     font-size: 2.18rem;
   }
-  .slider-content__margin-box {
+  /* .slider-content__margin-box {
     margin-top: -31.5em;
     padding-bottom: 8.3em;
-  }
+  } */
   .slider-content__carousel-content {
     width: 53em;
   }
   .carousel-item__NuxtLink__img {
-    width: 2.5%;
+    width: 2.3%;
     top: 0.2em;
   }
   .carousel__btn-content__btn__img {
-    width: 1.2em;
+    width: 1.1em;
   }
   .service-box__link-box {
     bottom: 3em;
@@ -995,7 +1002,7 @@ ul {
     font-size: 1.2rem;
   }
   .footer-content__link-box__DigitalSeed__Nuxtlink {
-    font-size: 1.3rem;
+    font-size: 1.1rem;
   }
   .subpage-services__img-text-box__img-box__img {
     width: 9em;
@@ -1031,11 +1038,11 @@ ul {
     font-size: 1.1rem;
   }
   .header-bottom__div-linkbox__link__img {
-    width: 20px;
+    width: 18px;
     height: 20px;
   }
   .menu__list__li__img {
-    width: 1.8em;
+    width: 1.6em;
   }
   .page__header__h2,
   .page__header__h3,
@@ -1063,10 +1070,10 @@ ul {
   .carousel-item__h1 {
     font-size: 1.86rem;
   }
-  .slider-content__margin-box {
+  /* .slider-content__margin-box {
     margin-top: -28em;
     padding-bottom: 6.7em;
-  }
+  } */
   .slider-content__carousel-content {
     width: 50em;
   }
@@ -1075,7 +1082,7 @@ ul {
     top: 0.15em;
   }
   .carousel__btn-content__btn__img {
-    width: 1.2em;
+    width: 1em;
   }
   .service-box__link-box {
     bottom: 3em;
@@ -1118,7 +1125,7 @@ ul {
     font-size: 1.1rem;
   }
   .footer-content__link-box__DigitalSeed__Nuxtlink {
-    font-size: 1.3rem;
+    font-size: 1rem;
   }
   .subpage-services__img-text-box__img-box__img {
     width: 8em;
@@ -1154,11 +1161,11 @@ ul {
     font-size: 1rem;
   }
   .header-bottom__div-linkbox__link__img {
-    width: 19px;
+    width: 17px;
     height: 19px;
   }
   .menu__list__li__img {
-    width: 2em;
+    width: 1.6em;
   }
   .page__header__h2,
   .page__header__h3,
@@ -1186,10 +1193,10 @@ ul {
   .carousel-item__h1 {
     font-size: 1.7rem;
   }
-  .slider-content__margin-box {
+  /* .slider-content__margin-box {
     margin-top: -28em;
     padding-bottom: 8em;
-  }
+  } */
   .slider-content__carousel-content {
     width: 45em;
   }
@@ -1198,7 +1205,7 @@ ul {
     top: 0.15em;
   }
   .carousel__btn-content__btn__img {
-    width: 1em;
+    width: 0.9em;
   }
   .service-box__link-box {
     bottom: 3em;
@@ -1277,11 +1284,11 @@ ul {
     font-size: 0.95rem;
   }
   .header-bottom__div-linkbox__link__img {
-    width: 19px;
-    height: 19px;
+    width: 16px;
+    height: 18px;
   }
   .menu__list__li__img {
-    width: 1.8em;
+    width: 1.6em;
   }
   .page__header__h2,
   .page__header__h3,
@@ -1309,10 +1316,10 @@ ul {
   .carousel-item__h1 {
     font-size: 1.6rem;
   }
-  .slider-content__margin-box {
+  /* .slider-content__margin-box {
     margin-top: -26em;
     padding-bottom: 7.3em;
-  }
+  } */
   .slider-content__carousel-content {
     width: 42em;
   }
@@ -1321,7 +1328,7 @@ ul {
     top: 0.19em;
   }
   .carousel__btn-content__btn__img {
-    width: 1em;
+    width: 0.9em;
   }
   .service-box__link-box {
     bottom: 2.5em;
@@ -1364,7 +1371,7 @@ ul {
     font-size: 0.95rem;
   }
   .footer-content__link-box__DigitalSeed__Nuxtlink {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
   }
   .subpage-services__img-text-box__img-box__img {
     width: 7em;
@@ -1400,11 +1407,11 @@ ul {
     font-size: 0.8rem;
   }
   .header-bottom__div-linkbox__link__img {
-    width: 19px;
-    height: 19px;
+    width: 15px;
+    height: 16px;
   }
   .menu__list__li__img {
-    width: 1.8em;
+    width: 1.6em;
   }
   .page__header__h2,
   .page__header__h3,
@@ -1432,10 +1439,10 @@ ul {
   .carousel-item__h1 {
     font-size: 1.6rem;
   }
-  .slider-content__margin-box {
+  /* .slider-content__margin-box {
     margin-top: -24em;
     padding-bottom: 5.7em;
-  }
+  } */
   .slider-content__carousel-content {
     width: 42em;
   }
@@ -1444,7 +1451,7 @@ ul {
     top: 0.19em;
   }
   .carousel__btn-content__btn__img {
-    width: 1em;
+    width: 0.9em;
   }
   .service-box__link-box {
     bottom: 2em;
@@ -1488,7 +1495,7 @@ ul {
     font-size: 0.85rem;
   }
   .footer-content__link-box__DigitalSeed__Nuxtlink {
-    font-size: 0.8rem;
+    font-size: 0.7rem;
   }
   .subpage-services__img-text-box__img-box__img {
     width: 7em;
@@ -1539,6 +1546,9 @@ ul {
   .page-btn__img {
     width: 1.1em;
   }
+  .slider-content__ab-box {
+    bottom: 5em;
+  }
   .service-box {
     height: 18em;
     padding: 5em 1.5em 1.5em 1.5em;
@@ -1556,10 +1566,10 @@ ul {
   .carousel-item__h1 {
     font-size: 1.3rem;
   }
-  .slider-content__margin-box {
+  /* .slider-content__margin-box {
     margin-top: -22em;
     padding-bottom: 5em;
-  }
+  } */
   .slider-content__carousel-content {
     width: 38em;
   }
@@ -1683,8 +1693,8 @@ ul {
     font-size: 1rem;
   }
   .header-bottom__div-linkbox__link__img {
-    width: 20px;
-    height: 20px;
+    width: 17px;
+    height: 18px;
   }
   .header-content {
     padding: 2em;
@@ -1782,6 +1792,9 @@ ul {
   .service-box__title {
     font-size: 1.3rem;
   }
+  .slider-content__ab-box {
+    bottom: 5em;
+  }
   .partners-content__img-box__div__img {
     width: 50%;
     height: 5em;
@@ -1816,10 +1829,10 @@ ul {
   .carousel-item__h1 {
     font-size: 1.3rem;
   }
-  .slider-content__margin-box {
+  /* .slider-content__margin-box {
     margin-top: -20em;
     padding-bottom: 3em;
-  }
+  } */
   .slider-content__carousel-content {
     width: 37em;
   }
@@ -2079,10 +2092,10 @@ ul {
   .carousel-item__h1 {
     font-size: 1.4rem;
   }
-  .slider-content__margin-box {
+  /* .slider-content__margin-box {
     margin-top: -27em;
     padding-bottom: 4em;
-  }
+  } */
   .slider-content__carousel-content {
     width: 90%;
   }

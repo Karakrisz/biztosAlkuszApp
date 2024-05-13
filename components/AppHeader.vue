@@ -21,6 +21,7 @@ const isMenuOpen = ref(false)
             src="/img/header/logo.svg"
             alt="Biztos Alkuszom"
             class="header-content__logo-box__link__img"
+            height="100%"
           />
         </a>
       </div>
@@ -42,8 +43,9 @@ const isMenuOpen = ref(false)
                 :class="['menu__item text-color text-transform-uppercase']"
               >
                 <template v-if="link.imagePath">
-                  <img
+                  <NuxtImg
                     class="menu__list__li__img"
+                    height="100%"
                     :src="link.imagePath"
                     :alt="link.name"
                   />

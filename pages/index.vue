@@ -48,8 +48,9 @@ const prevSlide = () => {
           class="slider-content__img"
           src="/img/slider/slider.webp"
           alt="Biztos Alkuszom"
+          format="webp"
         />
-        <div class="slider-content__margin-box">
+        <div class="slider-content__ab-box position-absolute">
           <div class="slider-content__carousel-content text-center">
             <div class="carousel position-relative">
               <div
@@ -441,8 +442,11 @@ const prevSlide = () => {
 
       <div class="service-bottom position-relative">
         <NuxtImg
+          loading="lazy"
+          rel="preload"
+          as="image"
           class="service-bottom__img"
-          src="/img/partners/bottom.svg"
+          src="/img/partners/bottom.webp"
           alt="Biztos Alkuszom"
         />
         <div class="service-bottom__box position-absolute bg-color-w">
@@ -464,7 +468,7 @@ const prevSlide = () => {
           <div class="blog-box">
             <NuxtImg
               class="blog-box__img"
-              src="/img/blog/blog.svg"
+              src="/img/blog/blog.jpg"
               alt="Biztos Alkuszom"
             />
             <div class="blog-box__text position-relative">
@@ -486,7 +490,7 @@ const prevSlide = () => {
           <div class="blog-box">
             <NuxtImg
               class="blog-box__img"
-              src="/img/blog/blog1.svg"
+              src="/img/blog/blog2.jpg"
               alt="Biztos Alkuszom"
             />
             <div class="blog-box__text position-relative">
@@ -508,7 +512,7 @@ const prevSlide = () => {
           <div class="blog-box">
             <NuxtImg
               class="blog-box__img"
-              src="/img/blog/blog3.svg"
+              src="/img/blog/blog3.jpg"
               alt="Biztos Alkuszom"
             />
             <div class="blog-box__text position-relative">
