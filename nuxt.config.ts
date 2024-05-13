@@ -2,7 +2,7 @@
 export default defineNuxtConfig({
   devtools: { enabled: true },
   css: ['~/assets/css/app.css'],
-  ssr: true, // Győződj meg róla, hogy ez az érték true
+  ssr: true,
   app: {
     head: {
       title: 'Biztos Alkuszom',

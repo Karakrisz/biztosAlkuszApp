@@ -49,6 +49,7 @@ const prevSlide = () => {
           src="/img/slider/slider.webp"
           alt="Biztos Alkuszom"
           format="webp"
+          height="100%"
         />
         <div class="slider-content__ab-box position-absolute">
           <div class="slider-content__carousel-content text-center">
@@ -77,6 +78,8 @@ const prevSlide = () => {
                     class="carousel-item__NuxtLink text-color bg-color-w f-600"
                     >{{ item.button }}
                     <NuxtImg
+                      loading="lazy"
+                      height="100%"
                       class="carousel-item__NuxtLink__img position-relative"
                       src="/img/slider/about-r.svg"
                       alt="Biztos Alkuszom"
@@ -88,6 +91,8 @@ const prevSlide = () => {
                       @click="prevSlide"
                     >
                       <NuxtImg
+                        loading="lazy"
+                        height="100%"
                         class="carousel__btn-content__btn__img"
                         src="/img/slider/arrow-l.svg"
                         alt="Biztos Alkuszom"
@@ -98,6 +103,8 @@ const prevSlide = () => {
                       @click="nextSlide"
                     >
                       <NuxtImg
+                        loading="lazy"
+                        height="100%"
                         class="carousel__btn-content__btn__img"
                         src="/img/slider/arrow-r.svg"
                         alt="Biztos Alkuszom"
@@ -123,6 +130,8 @@ const prevSlide = () => {
         <div class="partners-content__img-box grid-7">
           <div class="partners-content__img-box__div text-center">
             <NuxtImg
+              loading="lazy"
+              height="100%"
               class="partners-content__img-box__div__img"
               src="/img/partners/partners.svg"
               alt="Biztos Alkuszom"
@@ -131,6 +140,8 @@ const prevSlide = () => {
 
           <div class="partners-content__img-box__div text-center">
             <NuxtImg
+              loading="lazy"
+              height="100%"
               class="partners-content__img-box__div__img"
               src="/img/partners/partners2.svg"
               alt="Biztos Alkuszom"
@@ -139,6 +150,8 @@ const prevSlide = () => {
 
           <div class="partners-content__img-box__div text-center">
             <NuxtImg
+              loading="lazy"
+              height="100%"
               class="partners-content__img-box__div__img"
               src="/img/partners/partners3.svg"
               alt="Biztos Alkuszom"
@@ -147,6 +160,8 @@ const prevSlide = () => {
 
           <div class="partners-content__img-box__div text-center">
             <NuxtImg
+              loading="lazy"
+              height="100%"
               class="partners-content__img-box__div__img"
               src="/img/partners/partners4.svg"
               alt="Biztos Alkuszom"
@@ -155,6 +170,8 @@ const prevSlide = () => {
 
           <div class="partners-content__img-box__div text-center">
             <NuxtImg
+              loading="lazy"
+              height="100%"
               class="partners-content__img-box__div__img"
               src="/img/partners/partners5.svg"
               alt="Biztos Alkuszom"
@@ -163,6 +180,8 @@ const prevSlide = () => {
 
           <div class="partners-content__img-box__div text-center">
             <NuxtImg
+              loading="lazy"
+              height="100%"
               class="partners-content__img-box__div__img"
               src="/img/partners/partners6.svg"
               alt="Biztos Alkuszom"
@@ -171,6 +190,8 @@ const prevSlide = () => {
 
           <div class="partners-content__img-box__div text-center">
             <NuxtImg
+              loading="lazy"
+              height="100%"
               class="partners-content__img-box__div__img"
               src="/img/partners/partners7.svg"
               alt="Biztos Alkuszom"
@@ -181,6 +202,8 @@ const prevSlide = () => {
         <div class="partners-content__img-box grid-7">
           <div class="partners-content__img-box__div text-center">
             <NuxtImg
+              loading="lazy"
+              height="100%"
               class="partners-content__img-box__div__img"
               src="/img/partners/partners8.svg"
               alt="Biztos Alkuszom"
@@ -189,6 +212,8 @@ const prevSlide = () => {
 
           <div class="partners-content__img-box__div text-center">
             <NuxtImg
+              loading="lazy"
+              height="100%"
               class="partners-content__img-box__div__img"
               src="/img/partners/partners9.svg"
               alt="Biztos Alkuszom"
@@ -197,6 +222,8 @@ const prevSlide = () => {
 
           <div class="partners-content__img-box__div text-center">
             <NuxtImg
+              loading="lazy"
+              height="100%"
               class="partners-content__img-box__div__img"
               src="/img/partners/partners10.svg"
               alt="Biztos Alkuszom"
@@ -205,6 +232,8 @@ const prevSlide = () => {
 
           <div class="partners-content__img-box__div text-center">
             <NuxtImg
+              loading="lazy"
+              height="100%"
               class="partners-content__img-box__div__img"
               src="/img/partners/partners11.svg"
               alt="Biztos Alkuszom"
@@ -213,6 +242,8 @@ const prevSlide = () => {
 
           <div class="partners-content__img-box__div text-center">
             <NuxtImg
+              loading="lazy"
+              height="100%"
               class="partners-content__img-box__div__img"
               src="/img/partners/partners12.svg"
               alt="Biztos Alkuszom"
@@ -221,6 +252,8 @@ const prevSlide = () => {
 
           <div class="partners-content__img-box__div text-center">
             <NuxtImg
+              loading="lazy"
+              height="100%"
               class="partners-content__img-box__div__img"
               src="/img/partners/partners13.svg"
               alt="Biztos Alkuszom"
@@ -229,6 +262,8 @@ const prevSlide = () => {
 
           <div class="partners-content__img-box__div text-center">
             <NuxtImg
+              loading="lazy"
+              height="100%"
               class="partners-content__img-box__div__img"
               src="/img/partners/partners14.svg"
               alt="Biztos Alkuszom"
@@ -249,6 +284,8 @@ const prevSlide = () => {
         <div class="servive-grid servive-grid--margin-bottom grid-3">
           <div class="service-box bg-color-w position-relative">
             <NuxtImg
+              loading="lazy"
+              height="100%"
               class="service-box__img"
               src="/img/services/gepjarmubiztositas.svg"
               alt="Biztos Alkuszom"
@@ -270,6 +307,8 @@ const prevSlide = () => {
                 class="page-link text-color-w f-600"
                 >Tovább
                 <NuxtImg
+                  loading="lazy"
+                  height="100%"
                   class="page-link__img position-relative"
                   src="/img/partners/right-arrow.svg"
                   alt="Biztos Alkuszom"
@@ -280,6 +319,8 @@ const prevSlide = () => {
 
           <div class="service-box bg-color-w position-relative">
             <NuxtImg
+              loading="lazy"
+              height="100%"
               class="service-box__img"
               src="/img/services/utazasbiztositas.svg"
               alt="Biztos Alkuszom"
@@ -300,6 +341,8 @@ const prevSlide = () => {
               <NuxtLink to="utasbiztositas" class="page-link text-color-w f-600"
                 >Tovább
                 <NuxtImg
+                  loading="lazy"
+                  height="100%"
                   class="page-link__img position-relative"
                   src="/img/partners/right-arrow.svg"
                   alt="Biztos Alkuszom"
@@ -310,6 +353,8 @@ const prevSlide = () => {
 
           <div class="service-box bg-color-w position-relative">
             <NuxtImg
+              loading="lazy"
+              height="100%"
               class="service-box__img"
               src="/img/services/tanulobiztositas.svg"
               alt="Biztos Alkuszom"
@@ -332,6 +377,8 @@ const prevSlide = () => {
                 class="page-link text-color-w f-600"
                 >Tovább
                 <NuxtImg
+                  loading="lazy"
+                  height="100%"
                   class="page-link__img position-relative"
                   src="/img/partners/right-arrow.svg"
                   alt="Biztos Alkuszom"
@@ -344,6 +391,8 @@ const prevSlide = () => {
         <div class="servive-grid grid-3">
           <div class="service-box bg-color-w position-relative">
             <NuxtImg
+              loading="lazy"
+              height="100%"
               class="service-box__img"
               src="/img/services/rendezveny_biztositas.svg"
               alt="Biztos Alkuszom"
@@ -367,6 +416,8 @@ const prevSlide = () => {
                 class="page-link text-color-w f-600"
                 >Tovább
                 <NuxtImg
+                  loading="lazy"
+                  height="100%"
                   class="page-link__img position-relative"
                   src="/img/partners/right-arrow.svg"
                   alt="Biztos Alkuszom"
@@ -377,6 +428,8 @@ const prevSlide = () => {
 
           <div class="service-box bg-color-w position-relative">
             <NuxtImg
+              loading="lazy"
+              height="100%"
               class="service-box__img"
               src="/img/services/karbejelentes.svg"
               alt="Biztos Alkuszom"
@@ -397,6 +450,8 @@ const prevSlide = () => {
               <NuxtLink to="karbejentes" class="page-link text-color-w f-600"
                 >Tovább
                 <NuxtImg
+                  loading="lazy"
+                  height="100%"
                   class="page-link__img position-relative"
                   src="/img/partners/right-arrow.svg"
                   alt="Biztos Alkuszom"
@@ -407,6 +462,8 @@ const prevSlide = () => {
 
           <div class="service-box bg-color-w position-relative">
             <NuxtImg
+              loading="lazy"
+              height="100%"
               class="service-box__img"
               src="/img/services/szemelyes_tanacsadas.svg"
               alt="Biztos Alkuszom"
@@ -430,6 +487,8 @@ const prevSlide = () => {
                 class="page-link text-color-w f-600"
                 >Tovább
                 <NuxtImg
+                  loading="lazy"
+                  height="100%"
                   class="page-link__img position-relative"
                   src="/img/partners/right-arrow.svg"
                   alt="Biztos Alkuszom"
@@ -443,11 +502,10 @@ const prevSlide = () => {
       <div class="service-bottom position-relative">
         <NuxtImg
           loading="lazy"
-          rel="preload"
-          as="image"
           class="service-bottom__img"
           src="/img/partners/bottom.webp"
           alt="Biztos Alkuszom"
+          height="100%"
         />
         <div class="service-bottom__box position-absolute bg-color-w">
           <h4 class="service-bottom__box__title linear-font">
@@ -467,9 +525,11 @@ const prevSlide = () => {
         <div class="blog-grid grid-3">
           <div class="blog-box">
             <NuxtImg
+              loading="lazy"
               class="blog-box__img"
               src="/img/blog/blog.jpg"
               alt="Biztos Alkuszom"
+              height="100%"
             />
             <div class="blog-box__text position-relative">
               <h3 class="blog-box__text__h3 text-transform-uppercase">
@@ -489,9 +549,11 @@ const prevSlide = () => {
           </div>
           <div class="blog-box">
             <NuxtImg
+              loading="lazy"
               class="blog-box__img"
               src="/img/blog/blog2.jpg"
               alt="Biztos Alkuszom"
+              height="100%"
             />
             <div class="blog-box__text position-relative">
               <h3 class="blog-box__text__h3 text-transform-uppercase">
@@ -511,9 +573,11 @@ const prevSlide = () => {
           </div>
           <div class="blog-box">
             <NuxtImg
+              loading="lazy"
               class="blog-box__img"
               src="/img/blog/blog3.jpg"
               alt="Biztos Alkuszom"
+              height="100%"
             />
             <div class="blog-box__text position-relative">
               <h3 class="blog-box__text__h3 text-transform-uppercase">
