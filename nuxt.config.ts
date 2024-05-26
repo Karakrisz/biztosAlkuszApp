@@ -44,7 +44,26 @@ export default defineNuxtConfig({
     },
   },
 
-  modules: ['@nuxt/image', '@nuxtjs/sitemap'],
+  modules: [
+    '@nuxt/image',
+    '@nuxtjs/sitemap',
+    [
+      'nuxt-mail',
+      {
+        message: {
+          to: 'mualimadnan8@gmail.com',
+        },
+        smtp: {
+          host: 'smtp.gmail.com',
+          port: 587,
+          auth: {
+            user: 'mualimadnan8@gmail.com',
+            pass: 'bbhr hxfw gchs vzmk',
+          },
+        },
+      },
+    ],
+  ],
 
   site: {
     url: 'https://www.alkuszom.info',

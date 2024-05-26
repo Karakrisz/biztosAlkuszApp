@@ -1,6 +1,7 @@
 <script setup>
 import { ref, computed } from 'vue'
 import { useRoute } from 'vue-router'
+import { useNuxtApp } from '#app'
 
 const specialPaths = [
   '/gepjarmu-biztositas',
@@ -8,9 +9,10 @@ const specialPaths = [
   '/tanulobiztositas',
   '/rendezvenyszolgalat',
   '/karbejentes',
-  '/szemelyes-tanacsadas'
+  '/szemelyes-tanacsadas',
 ]
 const route = useRoute()
+const nuxtApp = useNuxtApp()
 
 const isSpecialPage = computed(() => specialPaths.includes(route.path))
 
@@ -31,7 +33,25 @@ const form = ref({
   message: '',
 })
 
-const sendEmail = () => console.log(form.value)
+const sendEmail = async () => {
+  try {
+    await nuxtApp.$mail.send({
+      to: 'mualimadnan8@gmail.com',
+      subject: `Contact Form Submission from ${form.value.firstname} ${form.value.lastname}`,
+      html: `
+        <p><strong>Name:</strong> ${form.value.firstname} ${form.value.lastname}</p>
+        <p><strong>Email:</strong> ${form.value.email}</p>
+        <p><strong>Phone Number:</strong> ${form.value.phonenumber}</p>
+        <p><strong>Message:</strong></p>
+        <p>${form.value.message}</p>
+      `,
+    })
+    alert('Email successfully sent!')
+  } catch (error) {
+    console.error('Error sending email:', error)
+    alert('Failed to send email.')
+  }
+}
 </script>
 
 <template>
