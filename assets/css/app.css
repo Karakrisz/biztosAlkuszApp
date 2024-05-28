@@ -184,6 +184,16 @@ ul {
   }
 }
 
+@keyframes slideInFromBottom {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
 /********************   Animation formating end **********************/
 
 /********************  Identical instructions start **********************/
@@ -211,7 +221,8 @@ ul {
 .page-link,
 .footer-content__link-box,
 .page-btn,
-.subpage-content-document__btn {
+.subpage-content-document__btn,
+.confirmation-message__p {
   background: #001647;
 }
 
@@ -344,7 +355,6 @@ ul {
   margin-top: -41.5em;
   padding-bottom: 12em;
 } */
-
 
 .slider-content__ab-box {
   bottom: 7em;
@@ -573,7 +583,7 @@ ul {
 .page-btn {
   padding: 0.9em 1.5em;
   cursor: pointer;
-  width: 13%;
+  height: 100%;
 }
 
 .page-btn__img {
@@ -610,6 +620,25 @@ ul {
 .footer-content__link-box__links {
   justify-content: center;
 }
+
+.contact-form__flex-box {
+  justify-content: space-between;
+}
+
+.confirmation-message {
+  animation: slideInFromBottom 0.5s ease-out;
+}
+
+.confirmation-message {
+  margin-top: 4em;
+}
+
+.confirmation-message__p {
+  padding: 1em;
+  width: max-content;
+  margin: auto;
+}
+
 /********************  Footer formating end **********************/
 
 /********************  Subpage formating start **********************/
@@ -1629,14 +1658,14 @@ ul {
   .form-group__textarea {
     font-size: 0.7rem;
   }
-  .page-btn {
-    width: 15%;
-  }
   .footer-content__link-box {
     margin: 7em 8em 0 8em;
   }
   .footer-content__link-box__DigitalSeed__Nuxtlink {
     font-size: 0.7rem;
+  }
+  .confirmation-message {
+    margin-top: 1em;
   }
   .subpage-services__img-text-box__img-box__img {
     width: 6.5em;
@@ -1883,9 +1912,6 @@ ul {
   .page-btn {
     width: max-content;
   }
-  .page-btn {
-    width: 30%;
-  }
   .service-box__link-box {
     left: unset;
     right: 2em;
@@ -1927,6 +1953,12 @@ ul {
   }
   .footer-content__link-box__links {
     align-items: center;
+  }
+  .contact-form__flex-box {
+    flex-direction: column;
+  }
+  .confirmation-message {
+    margin-top: 1em;
   }
   .subpage-services__img-text-box__img-box__img {
     width: 6.5em;
@@ -2077,7 +2109,7 @@ ul {
     flex-direction: column;
   }
   .menu__list__li__img {
-    width: 65%;
+    width: 100%;
   }
   .header-content__logo-box__link__img {
     width: 13em;
@@ -2224,6 +2256,15 @@ ul {
   }
   .footer-content__link-box__links {
     align-items: center;
+  }
+  .contact-form__flex-box {
+    flex-direction: column;
+  }
+  .confirmation-message {
+    margin-top: 1em;
+  }
+  .confirmation-message__p {
+    width: 100%;
   }
   .subpage-services__img-text-box__img-box__img {
     width: 6.5em;

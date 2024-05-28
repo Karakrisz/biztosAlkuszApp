@@ -20,7 +20,7 @@ const links = [
   { name: 'Főoldal', path: '/' },
   { name: 'Partnerek', path: '/partnerek' },
   { name: 'Szolgáltatások', path: '/szolgaltatasok' },
-  { name: 'Dokumentumok', path: '/dokumentumok' },
+  { name: 'ÁSZF', path: '/adatvedelmi-tajekoztato' },
   { name: 'Ajánlatkérés', path: '/ajanlatkeres' },
   { name: 'Kapcsolat', path: '/kapcsolat' },
 ]
@@ -33,11 +33,13 @@ const form = ref({
   message: '',
 })
 
+const isSent = ref(false)
+
 const sendEmail = async () => {
   try {
     await nuxtApp.$mail.send({
       to: 'mualimadnan8@gmail.com',
-      subject: `Contact Form Submission from ${form.value.firstname} ${form.value.lastname}`,
+      subject: `Új üzenetet küldött - ${form.value.firstname} ${form.value.lastname}`,
       html: `
         <p><strong>Name:</strong> ${form.value.firstname} ${form.value.lastname}</p>
         <p><strong>Email:</strong> ${form.value.email}</p>
@@ -46,7 +48,7 @@ const sendEmail = async () => {
         <p>${form.value.message}</p>
       `,
     })
-    alert('Email successfully sent!')
+    isSent.value = true
   } catch (error) {
     console.error('Error sending email:', error)
     alert('Failed to send email.')
@@ -130,15 +132,31 @@ const sendEmail = async () => {
                 required
               ></textarea>
             </div>
-            <div class="contact-form__btn-box t-end">
-              <button class="page-btn text-color-w" type="submit">
-                Küldés
-                <NuxtImg
-                  class="page-btn__img position-relative"
-                  src="/img/btn-arrow.svg"
-                  alt="Biztos Alkuszom"
-                />
-              </button>
+            <div v-if="!isSent" class="contact-form__flex-box d-flex">
+              <div class="contact-form__flex-box__text-box">
+                <p class="contact-form__flex-box__text-box text-color">
+                  A Küldés gombra való kattintással automatikusan elfogadja az
+                  Adatvédelmi Szabályzatot.
+                </p>
+              </div>
+              <div class="contact-form__btn-box t-end">
+                <button
+                  class="page-btn contact-form__btn-box__btn text-color-w"
+                  type="submit"
+                >
+                  Küldés
+                  <NuxtImg
+                    class="page-btn__img position-relative"
+                    src="/img/btn-arrow.svg"
+                    alt="Biztos Alkuszom"
+                  />
+                </button>
+              </div>
+            </div>
+            <div v-if="isSent" class="confirmation-message">
+              <p class="confirmation-message__p text-color-w text-center">
+                Köszönjük az üzenetét, hamarosan felvesszük Önnel a kapcsolatot.
+              </p>
             </div>
           </form>
         </div>
