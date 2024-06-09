@@ -1,7 +1,7 @@
 <script setup>
 import { ref, computed } from 'vue'
 import { useRoute } from 'vue-router'
-import { useNuxtApp } from '#app'
+// import { useNuxtApp } from '#app'
 
 const specialPaths = [
   '/gepjarmu-biztositas',
@@ -12,7 +12,7 @@ const specialPaths = [
   '/szemelyes-tanacsadas',
 ]
 const route = useRoute()
-const nuxtApp = useNuxtApp()
+// const nuxtApp = useNuxtApp()
 
 const isSpecialPage = computed(() => specialPaths.includes(route.path))
 
@@ -35,20 +35,47 @@ const form = ref({
 
 const isSent = ref(false)
 
+// const sendEmail = async () => {
+//   try {
+//     await nuxtApp.$mail.send({
+//       to: 'mualimadnan8@gmail.com',
+//       subject: `Új üzenetet küldött - ${form.value.firstname} ${form.value.lastname}`,
+//       html: `
+//         <p><strong>Name:</strong> ${form.value.firstname} ${form.value.lastname}</p>
+//         <p><strong>Email:</strong> ${form.value.email}</p>
+//         <p><strong>Phone Number:</strong> ${form.value.phonenumber}</p>
+//         <p><strong>Message:</strong></p>
+//         <p>${form.value.message}</p>
+//       `,
+//     })
+//     isSent.value = true
+//   } catch (error) {
+//     console.error('Error sending email:', error)
+//     alert('Failed to send email.')
+//   }
+// }
+
 const sendEmail = async () => {
   try {
-    await nuxtApp.$mail.send({
-      to: 'mualimadnan8@gmail.com',
-      subject: `Új üzenetet küldött - ${form.value.firstname} ${form.value.lastname}`,
-      html: `
-        <p><strong>Name:</strong> ${form.value.firstname} ${form.value.lastname}</p>
-        <p><strong>Email:</strong> ${form.value.email}</p>
-        <p><strong>Phone Number:</strong> ${form.value.phonenumber}</p>
-        <p><strong>Message:</strong></p>
-        <p>${form.value.message}</p>
-      `,
+    const response = await fetch('https://formspree.io/f/xoqgzzrd', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        firstname: form.value.firstname,
+        lastname: form.value.lastname,
+        email: form.value.email,
+        phonenumber: form.value.phonenumber,
+        message: form.value.message,
+      }),
     })
-    isSent.value = true
+
+    if (response.ok) {
+      isSent.value = true
+    } else {
+      throw new Error('Failed to send email')
+    }
   } catch (error) {
     console.error('Error sending email:', error)
     alert('Failed to send email.')

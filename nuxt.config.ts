@@ -51,14 +51,14 @@ export default defineNuxtConfig({
       'nuxt-mail',
       {
         message: {
-          to: 'mualimadnan8@gmail.com',
+          to: 'web@alkuszom.info',
         },
         smtp: {
-          host: 'smtp.gmail.com',
+          host: 's56.tarhely.com',
           port: 587,
           auth: {
-            user: 'mualimadnan8@gmail.com',
-            pass: 'bbhr hxfw gchs vzmk',
+            user: 'web@alkuszom.info',
+            pass: '#+SpM_HR~QCy',
           },
         },
       },

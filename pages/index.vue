@@ -43,6 +43,8 @@ const prevSlide = () => {
 <template>
   <div>
     <section>
+      <!-- width="1920" height="808"
+      sizes="100vw" -->
       <div class="slider-content position-relative">
         <NuxtImg
           class="slider-content__img"
