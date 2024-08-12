@@ -1,6 +1,46 @@
 <script setup lang="ts">
 import { ref, computed } from 'vue'
 
+import he from 'he'
+
+interface Post {
+  id: number
+  title: string
+  body: string
+  image: string
+}
+
+const itemsPost = ref<Post[] | null>(null)
+const error = ref<string | null>(null)
+const loading = ref(false)
+
+async function fetchPosts() {
+  loading.value = true
+  try {
+    const response = await fetch('https://alkuszom.info/api/public/json-posts')
+    if (!response.ok) throw new Error('Failed to fetch posts')
+    const data = await response.json()
+    itemsPost.value = data
+  } catch (e) {
+    error.value = (e as Error).message
+    console.error('Error fetching posts:', (e as Error).message)
+  } finally {
+    loading.value = false
+  }
+}
+
+onMounted(() => {
+  fetchPosts()
+})
+
+function getShortBody(body: string) {
+  const decodedBody = he.decode(body)
+  if (decodedBody.length > 100) {
+    return decodedBody.substring(0, 100) + '...'
+  }
+  return decodedBody
+}
+
 const sliderElem = ref([
   {
     title: 'Biztosítás, ami Mozgásban Tart',
@@ -403,7 +443,7 @@ const prevSlide = () => {
               <h3
                 class="service-box__title text-transform-uppercase text-color text-center"
               >
-                RENDEZVÉNYSZOLGÁLAT
+                Rendezvény biztosítás
               </h3>
               <p class="service-box__description text-color">
                 Biztosításaink magukban foglalják a felelősségbiztosítást, a
@@ -525,72 +565,25 @@ const prevSlide = () => {
           </h2>
         </div>
         <div class="blog-grid grid-3">
-          <div class="blog-box">
+          <div v-for="post in itemsPost" :key="post.id" class="blog-box">
             <NuxtImg
               loading="lazy"
               class="blog-box__img"
-              src="/img/blog/blog.jpg"
-              alt="Biztos Alkuszom"
               height="100%"
+              :src="`https://alkuszom.info/api/public/storage/${post.image}`"
+              alt="{{ post.title }}"
             />
             <div class="blog-box__text position-relative">
               <h3 class="blog-box__text__h3 text-transform-uppercase">
-                Az Ön Teljes Útmutatója a Lakásbiztosítás Világában
+                {{ post.title }}
               </h3>
-              <p class="blog-box__text__p">
-                Fedezze fel, hogyan válassza ki a legmegfelelőbb
-                lakásbiztosítást életstílusához és igényeihez, miközben
-                megismeri a fedezetek és kedvezmények titkait.
-              </p>
+
+              <p class="blog-box__text__p" v-html="getShortBody(post.body)" />
+
               <div class="blog-box__link-box position-absolute">
-                <NuxtLink class="blog-box__link-box__Nuxtlink" to="/"
-                  >Elolvasom a cikket</NuxtLink
-                >
-              </div>
-            </div>
-          </div>
-          <div class="blog-box">
-            <NuxtImg
-              loading="lazy"
-              class="blog-box__img"
-              src="/img/blog/blog2.jpg"
-              alt="Biztos Alkuszom"
-              height="100%"
-            />
-            <div class="blog-box__text position-relative">
-              <h3 class="blog-box__text__h3 text-transform-uppercase">
-                Vállalkozók Biztosítási Kalauza: Hogyan Védje Meg Cégét
-              </h3>
-              <p class="blog-box__text__p">
-                Fedezze fel, hogyan válassza ki a legmegfelelőbb
-                lakásbiztosítást életstílusához és igényeihez, miközben
-                megismeri a fedezetek és kedvezmények titkait.
-              </p>
-              <div class="blog-box__link-box position-absolute">
-                <NuxtLink class="blog-box__link-box__Nuxtlink" to="/"
-                  >Elolvasom a cikket</NuxtLink
-                >
-              </div>
-            </div>
-          </div>
-          <div class="blog-box">
-            <NuxtImg
-              loading="lazy"
-              class="blog-box__img"
-              src="/img/blog/blog3.jpg"
-              alt="Biztos Alkuszom"
-              height="100%"
-            />
-            <div class="blog-box__text position-relative">
-              <h3 class="blog-box__text__h3 text-transform-uppercase">
-                Utazási Biztosítás: Miért Nélkülözhetetlen Minden Külföldi Út
-                Során
-              </h3>
-              <p class="blog-box__text__p">
-                Ismerje meg az utazási biztosítás jelentőségét
-              </p>
-              <div class="blog-box__link-box position-absolute">
-                <NuxtLink class="blog-box__link-box__Nuxtlink" to="/"
+                <NuxtLink
+                  class="blog-box__link-box__Nuxtlink"
+                  :to="`/posts/${post.id}`"
                   >Elolvasom a cikket</NuxtLink
                 >
               </div>

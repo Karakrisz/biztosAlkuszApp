@@ -1,4 +1,5 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
+
 export default defineNuxtConfig({
   devtools: { enabled: true },
   css: ['~/assets/css/app.css'],
@@ -66,7 +67,14 @@ export default defineNuxtConfig({
   ],
 
   site: {
-    url: 'https://www.alkuszom.info',
-    trailingSlash: true,
+    hostname: 'https://www.alkuszom.info',
+    routes: async () => {
+      const response = await fetch(
+        'https://www.alkuszom.info/api/public/json-posts'
+      )
+      const urls = await response.json()
+      return urls
+    },
   },
+
 })

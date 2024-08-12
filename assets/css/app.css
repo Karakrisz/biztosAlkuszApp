@@ -510,7 +510,6 @@ ul {
 }
 
 .blog-box__text__h3 {
-  width: 90%;
   font-size: 1.9rem;
 }
 
@@ -689,6 +688,23 @@ ul {
   padding: 0.5em 0;
 }
 
+.subpage-blog-content__img {
+  width: 60%;
+  margin-bottom: 2%;
+}
+
+.subpage-blog-content {
+  padding: 3em 5em;
+}
+
+.subpage-blog-content__h2 {
+  margin-bottom: 1.7em;
+}
+
+.subpage-blog-content h3 {
+  font-size: 1.3rem;
+  margin: 1.7em 0;
+}
 /********************  Subpage formating formating end **********************/
 
 /********************  Media formating start **********************/
@@ -1994,6 +2010,18 @@ ul {
   .subpage-content-document {
     padding: 5em;
   }
+  .subpage-blog-content {
+    padding: 2em;
+  }
+  .subpage-blog-content__h2 {
+    font-size: 1rem;
+  }
+  .subpage-blog-content h3 {
+    font-size: 1.2rem;
+  }
+  .subpage-blog-content__img {
+    width: 100%;
+}
 }
 
 @media screen and (max-width: 767px) {
@@ -2299,6 +2327,18 @@ ul {
   }
   .subpage-content-document {
     padding: 2.5em 2em 4.3em 2em;
+  }
+  .subpage-blog-content__img {
+    width: 100%;
+  }
+  .subpage-blog-content {
+    padding: 2em;
+  }
+  .subpage-blog-content__h2 {
+    font-size: 1rem;
+  }
+  .subpage-blog-content h3 {
+    font-size: 1.2rem;
   }
 }
 

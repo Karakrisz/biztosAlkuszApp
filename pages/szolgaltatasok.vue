@@ -120,7 +120,7 @@ useHead({
               <h3
                 class="service-box__title text-transform-uppercase text-color text-center"
               >
-                RENDEZVÉNYSZOLGÁLAT
+                Rendezvény biztosítás
               </h3>
               <p class="service-box__description text-color">
                 Biztosításaink magukban foglalják a felelősségbiztosítást, a
