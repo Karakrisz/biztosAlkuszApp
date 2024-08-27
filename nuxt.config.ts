@@ -67,14 +67,9 @@ export default defineNuxtConfig({
   ],
 
   site: {
-    hostname: 'https://www.alkuszom.info',
-    routes: async () => {
-      const response = await fetch(
-        'https://www.alkuszom.info/api/public/json-posts'
-      )
-      const urls = await response.json()
-      return urls
-    },
+    url: 'https://www.alkuszom.info',
+    name: 'Bizton Alkuszom',
   },
+
 
 })

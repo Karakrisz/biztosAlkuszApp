@@ -31,22 +31,39 @@ onMounted(() => {
 
 <template>
   <div class="subpage-blog-content position-relative">
-    <div v-if="loading"><h2 class="supage-content__h2 text-transform-uppercase f-500">Loading...</h2></div>
+    <div v-if="loading">
+      <h2 class="supage-content__h2 text-transform-uppercase f-500">
+        Loading...
+      </h2>
+    </div>
     <div v-else-if="error">
-      <h2 class="subpage-blog-content__h2 text-transform-uppercase f-500">{{ error }}</h2>
+      <h2 class="subpage-blog-content__h2 text-transform-uppercase f-500">
+        {{ error }}
+      </h2>
     </div>
     <div v-else-if="post">
-      <h2 class="subpage-blog-content__h2 text-color text-transform-uppercase f-500">{{ post.title }}</h2>
+      <h2
+        class="subpage-blog-content__h2 text-color text-transform-uppercase f-500"
+      >
+        {{ post.title }}
+      </h2>
       <NuxtImg
         class="subpage-blog-content__img"
         :src="`https://alkuszom.info/api/public/storage/${post.image}`"
         :alt="post.title"
       />
-      <p class="subpage-blog-content__p text-color f-400" v-html="post.body"></p>
+      <p
+        class="subpage-blog-content__p text-color f-400"
+        v-html="post.body"
+      ></p>
     </div>
-    <div v-else><h2 class="subpage-blog-content__h2 f-400">No post available.</h2></div>
+    <div v-else>
+      <h2 class="subpage-blog-content__h2 f-400">No post available.</h2>
+    </div>
     <div class="subpage-blog-content__link-box">
-      <NuxtLink class="subpage-blog-content__link-box__NuxtLink text-color-w f-600" to="/"
+      <NuxtLink
+        class="subpage-blog-content__link-box__NuxtLink text-color-w f-600"
+        to="/"
         >Kezdőlap</NuxtLink
       >
     </div>
