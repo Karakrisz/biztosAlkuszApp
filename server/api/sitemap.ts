@@ -1,0 +1,30 @@
+interface Post {
+  id: number
+  modifiedAt?: string
+}
+
+export default defineSitemapEventHandler(async (e) => {
+  try {
+    // Fetch posts from the API
+    const response = await fetch('https://alkuszom.info/api/public/json-posts')
+
+    // Check if the response is okay
+    if (!response.ok) {
+      throw new Error('Failed to fetch posts')
+    }
+
+    // Parse the response as JSON
+    const posts: Post[] = await response.json()
+
+    // Map the posts to the sitemap format
+    return posts.map((post: Post) => {
+      return {
+        loc: `/posts/${post.id}`,
+        lastmod: post.modifiedAt ? new Date(post.modifiedAt) : new Date(), // Adjust this field based on the API response
+      }
+    })
+  } catch (error) {
+    console.error('Error fetching posts for sitemap:', error)
+    return [] // Return an empty array if there's an error
+  }
+})

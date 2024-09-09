@@ -68,8 +68,10 @@ export default defineNuxtConfig({
 
   site: {
     url: 'https://www.alkuszom.info',
-    name: 'Bizton Alkuszom',
+    name: 'Biztos Alkuszom',
   },
 
-
+  sitemap: {
+    sources: ['/api/sitemap'],
+  },
 })
