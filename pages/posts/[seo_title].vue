@@ -11,7 +11,7 @@ async function fetchPost() {
   loading.value = true
   try {
     const response = await fetch(
-      `https://alkuszom.info/api/public/json-posts/${route.params.id}`
+      `https://alkuszom.info/api/public/json-posts/${route.params.seo_title}`
     )
     if (!response.ok) throw new Error('Failed to fetch post')
     const data = await response.json()

@@ -6,6 +6,7 @@ import he from 'he'
 interface Post {
   id: number
   title: string
+  seo_title: string
   body: string
   image: string
 }
@@ -565,7 +566,7 @@ const prevSlide = () => {
           </h2>
         </div>
         <div class="blog-grid grid-3">
-          <div v-for="post in itemsPost" :key="post.id" class="blog-box">
+          <div v-for="post in itemsPost" :key="post.seo_title" class="blog-box">
             <NuxtImg
               loading="lazy"
               class="blog-box__img"
@@ -583,7 +584,7 @@ const prevSlide = () => {
               <div class="blog-box__link-box position-absolute">
                 <NuxtLink
                   class="blog-box__link-box__Nuxtlink"
-                  :to="`/posts/${post.id}`"
+                  :to="`/posts/${post.seo_title}`"
                   >Elolvasom a cikket</NuxtLink
                 >
               </div>
