@@ -4,6 +4,7 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   css: ['~/assets/css/app.css'],
   ssr: true,
+
   app: {
     head: {
       title: 'Biztos Alkuszom',
@@ -74,4 +75,6 @@ export default defineNuxtConfig({
   sitemap: {
     sources: ['/api/sitemap'],
   },
+
+  compatibilityDate: '2024-09-19',
 })
