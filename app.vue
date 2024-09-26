@@ -51,7 +51,7 @@ const installPWA = async () => {
     <!-- Üzenet iOS felhasználóknak -->
     <div v-if="isIOS && isInStandaloneMode === false" class="ios-install-guide">
       <p>
-        Használd alkalmazásként! Koppints a "Megosztás" ikonra, majd válaszd a
+        Használd az alkalmazást! Koppints a "Megosztás" ikonra, majd válaszd a
         "Hozzáadás a Főképernyőhöz" lehetőséget.
       </p>
     </div>
