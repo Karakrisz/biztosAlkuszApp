@@ -1,6 +1,16 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 
 export default defineNuxtConfig({
+  devServer: {
+    host: 'localhost',
+    port: 3013,
+  },
+  runtimeConfig: {
+    public: {
+      apiBaseUrl:
+        process.env.API_BASE_URL || 'https://alkuszom.info/api/public',
+    },
+  },
   devtools: { enabled: true },
   css: ['~/assets/css/app.css'],
   ssr: true,
@@ -30,6 +40,7 @@ export default defineNuxtConfig({
             font-src 'self' https: data:;
             style-src 'self' https: 'unsafe-inline';
             script-src 'self' https: 'unsafe-inline' 'unsafe-eval';
+            connect-src 'self' https: http: https://alkuszom.info/api/public;
           `,
         },
       ],
@@ -65,6 +76,7 @@ export default defineNuxtConfig({
         },
       },
     ],
+    '@vite-pwa/nuxt',
   ],
 
   site: {
@@ -74,6 +86,47 @@ export default defineNuxtConfig({
 
   sitemap: {
     sources: ['/api/sitemap'],
+  },
+
+  pwa: {
+    manifest: {
+      name: 'Alkuszom',
+      short_name: 'Alkuszom',
+      description: 'Biztos Alkuszom',
+      display: 'standalone',
+      start_url: '/',
+      background_color: '#ffffff',
+      theme_color: '#000000',
+      icons: [
+        {
+          src: 'icons/icon_64x64.png',
+          sizes: '64x64',
+          type: 'image/png',
+        },
+        {
+          src: 'icons/icon_144x144.png',
+          sizes: '144x144',
+          type: 'image/png',
+        },
+        {
+          src: 'icons/icon_192x192.png',
+          sizes: '192x192',
+          type: 'image/png',
+        },
+        {
+          src: 'icons/icon_512x512.png',
+          sizes: '512x512',
+          type: 'image/png',
+        },
+      ],
+    },
+    // workbox: {
+    //   navigateFallback: '/index.html',
+    // },
+    devOptions: {
+      enabled: true,
+      type: 'module',
+    },
   },
 
   compatibilityDate: '2024-09-19',

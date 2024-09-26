@@ -1,45 +1,30 @@
 <script setup lang="ts">
-import { ref, onMounted } from 'vue'
+import { ref } from 'vue'
 
-import he from 'he'
+import { useAsyncData, useRuntimeConfig } from '#app'
 
 interface Post {
   id: number
   title: string
-  seo_title: string
+  slug: string
   body: string
   image: string
 }
 
-const itemsPost = ref<Post[] | null>(null)
-const error = ref<string | null>(null)
-const loading = ref(false)
+const config = useRuntimeConfig()
 
-async function fetchPosts() {
-  loading.value = true
-  try {
-    const response = await fetch('https://alkuszom.info/api/public/json-posts')
-    if (!response.ok) throw new Error('Failed to fetch posts')
-    const data = await response.json()
-    itemsPost.value = data
-  } catch (e) {
-    error.value = (e as Error).message
-    console.error('Error fetching posts:', (e as Error).message)
-  } finally {
-    loading.value = false
+const { data: itemsPost } = await useAsyncData<Post[]>('posts', () =>
+  $fetch(`${config.public.apiBaseUrl}/json-posts`)
+)
+
+const latestPosts = itemsPost.value?.slice(-3) || []
+
+function truncateContent(content: string, maxLength: number): string {
+  const textContent = content.replace(/<[^>]*>/g, '')
+  if (textContent.length <= maxLength) {
+    return textContent
   }
-}
-
-onMounted(() => {
-  fetchPosts()
-})
-
-function getShortBody(body: string) {
-  const decodedBody = he.decode(body)
-  if (decodedBody.length > 100) {
-    return decodedBody.substring(0, 100) + '...'
-  }
-  return decodedBody
+  return textContent.slice(0, maxLength) + '...'
 }
 
 const sliderElem = ref([
@@ -566,12 +551,12 @@ const prevSlide = () => {
           </h2>
         </div>
         <div class="blog-grid grid-3">
-          <div v-for="post in itemsPost" :key="post.seo_title" class="blog-box">
+          <div v-for="post in latestPosts" :key="post.slug" class="blog-box">
             <NuxtImg
               loading="lazy"
               class="blog-box__img"
               height="100%"
-              :src="`https://alkuszom.info/api/public/storage/${post.image}`"
+              :src="`${config.public.apiBaseUrl}/storage/${post.image}`"
               alt="{{ post.title }}"
             />
             <div class="blog-box__text position-relative">
@@ -579,12 +564,15 @@ const prevSlide = () => {
                 {{ post.title }}
               </h3>
 
-              <p class="blog-box__text__p" v-html="getShortBody(post.body)" />
+              <p
+                class="blog-box__text__p"
+                v-html="truncateContent(post.body, 150)"
+              ></p>
 
               <div class="blog-box__link-box position-absolute">
                 <NuxtLink
                   class="blog-box__link-box__Nuxtlink"
-                  :to="`/posts/${post.seo_title}`"
+                  :to="`/posts/${post.slug}`"
                   >Elolvasom a cikket</NuxtLink
                 >
               </div>

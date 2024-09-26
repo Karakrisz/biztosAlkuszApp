@@ -1,6 +1,6 @@
 interface Post {
   id: number
-  seo_title: string
+  slug: string
   modifiedAt?: string
 }
 
@@ -20,7 +20,7 @@ export default defineSitemapEventHandler(async (e) => {
     // Map the posts to the sitemap format
     return posts.map((post: Post) => {
       return {
-        loc: `/posts/${post.seo_title}`,
+        loc: `/posts/${post.slug}`,
         lastmod: post.modifiedAt ? new Date(post.modifiedAt) : new Date(), // Adjust this field based on the API response
       }
     })

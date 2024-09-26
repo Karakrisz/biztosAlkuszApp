@@ -534,6 +534,37 @@ ul {
   font-size: 1.7rem;
 }
 
+.go-back-button {
+  align-items: center;
+  background-color: #001647;
+  border-radius: 5px;
+  color: #fff;
+  display: inline-flex;
+  margin-top: 40px;
+  overflow: hidden;
+  padding: 10px 20px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.go-back-button:hover {
+  background-color: #001647;
+  box-shadow: 0 2px 5px #0000001a;
+}
+
+.go-back-button__icon {
+  margin-right: 10px;
+  transition: transform 0.3s ease;
+}
+
+.go-back-button:hover .go-back-button__icon {
+  transform: translate(-5px);
+}
+
+.go-back-button__text {
+  position: relative;
+  z-index: 1;
+}
 /********************  Blog formating end **********************/
 
 /********************  Footer formating start **********************/
@@ -705,13 +736,22 @@ ul {
   font-size: 1.3rem;
   margin: 1.7em 0;
 }
+
+.slug-blog__img {
+  width: 70%;
+}
+
+.slug-blog__h2 {
+  margin-bottom: 2em;
+}
 /********************  Subpage formating formating end **********************/
 
 /********************  Media formating start **********************/
 
 @media (min-width: 2200px) and (max-width: 2570px) {
   p,
-  .subpage-content-document__ul__li__link {
+  .subpage-content-document__ul__li__link,
+  .pwa-btn {
     font-size: 1.4rem;
   }
   .menu__item,
@@ -833,7 +873,8 @@ ul {
 
 @media (min-width: 2000px) and (max-width: 2200px) {
   p,
-  .subpage-content-document__ul__li__link {
+  .subpage-content-document__ul__li__link,
+  .pwa-btn {
     font-size: 1.4rem;
   }
   .menu__item,
@@ -955,7 +996,8 @@ ul {
 
 @media (min-width: 1800px) and (max-width: 2000px) {
   p,
-  .subpage-content-document__ul__li__link {
+  .subpage-content-document__ul__li__link,
+  .pwa-btn {
     font-size: 1.4rem;
   }
   .menu__item,
@@ -1078,7 +1120,8 @@ ul {
 
 @media (min-width: 1600px) and (max-width: 1800px) {
   p,
-  .subpage-content-document__ul__li__link {
+  .subpage-content-document__ul__li__link,
+  .pwa-btn {
     font-size: 1.2rem;
   }
   .menu__item,
@@ -1201,7 +1244,8 @@ ul {
 
 @media (min-width: 1500px) and (max-width: 1600px) {
   p,
-  .subpage-content-document__ul__li__link {
+  .subpage-content-document__ul__li__link,
+  .pwa-btn {
     font-size: 1.15rem;
   }
   .menu__item,
@@ -1324,7 +1368,8 @@ ul {
 
 @media (min-width: 1400px) and (max-width: 1500px) {
   p,
-  .subpage-content-document__ul__li__link {
+  .subpage-content-document__ul__li__link,
+  .pwa-btn {
     font-size: 1rem;
   }
   .menu__item,
@@ -1447,7 +1492,8 @@ ul {
 
 @media (min-width: 1200px) and (max-width: 1400px) {
   p,
-  .subpage-content-document__ul__li__link {
+  .subpage-content-document__ul__li__link,
+  .pwa-btn {
     font-size: 0.9rem;
   }
   .menu__item,
@@ -1571,7 +1617,8 @@ ul {
 
 @media (min-width: 991px) and (max-width: 1200px) {
   p,
-  .subpage-content-document__ul__li__link {
+  .subpage-content-document__ul__li__link,
+  .pwa-btn {
     font-size: 0.85rem;
   }
   .menu__item,
@@ -1718,7 +1765,8 @@ ul {
 
 @media (min-width: 768px) and (max-width: 991px) {
   p,
-  .subpage-content-document__ul__li__link {
+  .subpage-content-document__ul__li__link,
+  .pwa-btn {
     font-size: 0.9rem;
   }
   .menu__item,
@@ -2021,12 +2069,16 @@ ul {
   }
   .subpage-blog-content__img {
     width: 100%;
-}
+  }
+  .slug-blog__img {
+    width: 100%;
+  }
 }
 
 @media screen and (max-width: 767px) {
   p,
-  .subpage-content-document__ul__li__link {
+  .subpage-content-document__ul__li__link,
+  .pwa-btn {
     font-size: 0.85rem;
   }
   .menu__item,
@@ -2339,6 +2391,9 @@ ul {
   }
   .subpage-blog-content h3 {
     font-size: 1.2rem;
+  }
+  .slug-blog__img {
+    width: 100%;
   }
 }
 
